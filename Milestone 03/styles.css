@@ -50,7 +50,6 @@ ul a i:hover{
   color: rgb(36, 155, 252);
 }
 
-
 /* Main Container */
 
 .main-container{
@@ -124,11 +123,16 @@ input::placeholder{
   padding-left: 10px;
 }
 
-
 pre{
   font-size: 1.5rem;
   font-weight: 500;
+  overflow-wrap: break-word;
+  white-space: wrap;
 }
+
+
+
+
 pre i{
   font-size: 1rem;  
 }
