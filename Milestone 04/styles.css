@@ -1,0 +1,392 @@
+/* GOOGLE FONT  */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+
+/* Ignore Milestone 04 & 05 Styling   */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+
+}
+
+/* SOCIAL LINKS  */
+
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  background-color: #dfdbdb43;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 5px;
+
+  
+}
+
+ul a{
+  margin: 0px 10px 0px 10px;
+  font-size: 30px;
+
+}
+.topPeragraph{
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+
+
+}
+
+ul a i{
+  color: black;
+}
+ul a i:hover{
+  color: rgb(36, 155, 252);
+}
+
+
+/* Main Container */
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  max-width:600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.infoIcon{
+
+ color: #002aff;
+ font-size: 1rem;
+ margin-right:8px;
+
+}
+
+
+.secIcon{
+  color: #002aff;
+  font-size: 2rem;
+  margin-right:8px;
+}
+
+
+/* main H1 Heading */
+
+h1{
+  text-align: center;
+  color: #333;
+  margin:0px;
+}
+
+
+h2{
+  color:  #007bff;
+  display: inline-block;
+  
+}
+
+.mainHeading{
+
+font-family: "Pacifico", cursive;
+font-weight: 400;
+font-style: normal;
+font-size: 50px;
+color:  #007bff;
+text-shadow: #002aff 4px 0 0px;
+
+}
+
+
+ /* Input Fields Styling */
+
+input{
+  padding-left: 10px;
+  width: auto;
+  height: 35px;
+  margin :5px 0px 15px 0px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(32, 176, 247, 0.2);;
+  outline: none;
+}
+
+input::placeholder{
+  padding-left: 10px;
+}
+
+
+pre{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+pre i{
+  font-size: 1rem;  
+}
+
+
+
+
+/* Buttons Styling  */
+
+
+button{
+  height: 40px;
+  width: 85px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background-color:#007bff;
+  color: #fff;
+  font-size: 14px;
+}
+
+button:hover{
+  background-color:#002aff;
+}
+button:active{
+  background-color:#007aff;
+}
+
+#genrate-resume-btn{
+margin-top: 20px;
+width: auto;
+margin-bottom: 20px;
+
+}
+
+#removeButton{
+
+display:none ;
+margin-bottom: 20px;
+}
+
+
+
+
+ /* All Sections styling */
+
+ section{
+   margin-bottom: 20px;
+   padding: 15px;
+   border-radius: 8px;
+   background-color: #f9f9f9;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  
+  /* 01 Section styling Personal Info */
+
+#personal-information{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+
+/* 02 Section styling Education */
+
+ #education-information{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}   
+ 
+
+
+  
+  /* Text Area Styling */
+  #education-information textarea{
+    width: auto;
+    height: 65px;
+    border-radius: 8px;
+    margin-bottom: 20px; ;
+    resize: none;
+    outline: none;
+    border: 1px solid rgba(32, 176, 247, 0.2);;
+    
+  } 
+
+
+#educationAreaTwo{
+
+display: none;
+}
+
+
+
+/* 03 Section styling Skill */
+
+
+#skillAreaTwo{
+  display: none;
+
+}
+
+
+
+#Skills{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}   
+ 
+
+#Skills textarea{
+
+width: auto;
+height: 65px;
+border-radius: 8px;
+margin-bottom: 20px; ;
+resize: none;
+outline: none;
+border: 1px solid rgba(32, 176, 247, 0.2);;
+  
+}
+
+/* Work Experience Styling */
+
+#workAreaTwo{
+  display: none;
+}
+
+
+
+#work-experience{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+#work-experience textarea{
+
+  width: auto;
+  height: 65px;
+  border-radius: 8px;
+  margin-bottom: 20px; ;
+  resize: none;
+  outline: none;
+  border: 1px solid rgba(32, 176, 247, 0.2);;
+    
+  }
+
+
+/* image section */
+
+#image-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 20px;
+}
+
+
+#uploaded-image{
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: fill;
+  margin: 0 auto 15px;
+  border: 4px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Download PdF button */
+
+#download-btn, #share-btn{
+  width: 120px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 5px;
+  padding: 5px;
+  
+}
+
+#download-btn i, #share-btn i{
+ font-size: 1rem;
+ margin-right: 5px;
+ font: 500;
+
+}
+
+ /* Media */
+
+@media (max-width: 476px) {
+ 
+  strong {
+    font-size: 1rem;
+  }
+  h2{
+  font-size: 1rem;
+  }
+  .mainHeading{
+  font-size: 2.2rem;
+  }
+  .secIcon{
+    font-size: 20px;
+  }
+} 
+
+
+
+@media Print{
+
+body *{
+visibility: hidden;
+
+}
+#output ,#output *{
+visibility: visible;
+
+}
+
+#output{
+position: absolute;
+top:  280px;
+left: 0;
+width: 100%;
+margin: auto;
+
+
+}
+
+.image-container ,.image-container *{
+  visibility: visible;
+}
+
+
+.image-container{
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 100%;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;;
+
+} 
+
+}
+
