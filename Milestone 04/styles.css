@@ -3,7 +3,7 @@
 
 
 
-/* Ignore Milestone 04 & 05 Styling   */
+/* Ignore Milestone  05 Styling   */
 
 body {
   font-family: Arial, sans-serif;
@@ -12,8 +12,8 @@ body {
   background-color: #f4f4f4;
   box-sizing: border-box;
   font-size: 1.2rem;
-
 }
+
 
 /* SOCIAL LINKS  */
 
@@ -35,6 +35,7 @@ ul a{
   font-size: 30px;
 
 }
+
 .topPeragraph{
   font-size: 16px;
   text-align: center;
@@ -124,16 +125,31 @@ input::placeholder{
   padding-left: 10px;
 }
 
+/* Text Area Styling */
+textarea{
+  width: auto;
+  height: 65px;
+  border-radius: 8px;
+  margin-bottom: 20px; ;
+  resize: none;
+  outline: none;
+  border: 1px solid rgba(32, 176, 247, 0.2);;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+
 
 pre{
   font-size: 1.5rem;
   font-weight: 500;
+  overflow-wrap: break-word;
+  white-space: wrap;
 }
+
 pre i{
   font-size: 1rem;  
 }
-
-
 
 
 /* Buttons Styling  */
@@ -172,8 +188,6 @@ margin-bottom: 20px;
 }
 
 
-
-
  /* All Sections styling */
 
  section{
@@ -205,21 +219,6 @@ margin-bottom: 20px;
   justify-content: center;
 
 }   
- 
-
-
-  
-  /* Text Area Styling */
-  #education-information textarea{
-    width: auto;
-    height: 65px;
-    border-radius: 8px;
-    margin-bottom: 20px; ;
-    resize: none;
-    outline: none;
-    border: 1px solid rgba(32, 176, 247, 0.2);;
-    
-  } 
 
 
 #educationAreaTwo{
@@ -245,19 +244,7 @@ display: none;
   justify-content: center;
 
 }   
- 
 
-#Skills textarea{
-
-width: auto;
-height: 65px;
-border-radius: 8px;
-margin-bottom: 20px; ;
-resize: none;
-outline: none;
-border: 1px solid rgba(32, 176, 247, 0.2);;
-  
-}
 
 /* Work Experience Styling */
 
@@ -274,20 +261,6 @@ border: 1px solid rgba(32, 176, 247, 0.2);;
   justify-content: center;
 
 }
-
-
-#work-experience textarea{
-
-  width: auto;
-  height: 65px;
-  border-radius: 8px;
-  margin-bottom: 20px; ;
-  resize: none;
-  outline: none;
-  border: 1px solid rgba(32, 176, 247, 0.2);;
-    
-  }
-
 
 /* image section */
 
