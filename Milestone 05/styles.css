@@ -267,9 +267,10 @@ display: none;
 #image-section{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: start;
-  height: 20px;
+  height: 80px;
+  width: auto;
 }
 
 
