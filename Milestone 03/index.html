@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - By Muhammad Shahroz</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- FONT AWESOME  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+  <form id="resumeForm">
+
+    <div class="main-container" id="container">
+      <h1>Resume Builder</h1>
+      <p class="topPeragraph">Designed and developed by <b>Muhammad Shahroz</b></p>
+      <ul>
+        <a href="https://www.facebook.com/muhammad.shahroz.58/" target="_blank"><i
+            class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-shahroz-a35b68292/" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/Muhammad-Shahr0z"><i class="fa-brands fa-github" target="_blank"></i></a>
+      </ul>
+
+
+
+
+
+      <!--01 Personal Information Section -->
+      <section id="personal-information" style="display: flex;">
+
+        <h2>Personal Information</h2>
+        <!--01 Full Name -->
+
+        <strong>Full Name:</strong>
+        <input id="fname" type="text" class="fullName" placeholder="Enter Your Full Name" required>
+
+
+        <!--02 Email Adress -->
+
+        <strong>Email Address:</strong>
+        <input id="email" type="email" class="emailAdress" placeholder="Enter Your Email Address " required>
+
+        <!--03 Mobile Number  -->
+
+        <strong>Mobile Number:</strong>
+        <input id="mobileNumber" type="number" class="mobileNumber" placeholder="Enter Your Mobile Number" required>
+
+        <!--04 Full Address -->
+
+        <strong>Full Address:</strong>
+        <input id="fullAddress" type="text" class="fullAdress" placeholder="Enter Your Full Address" required>
+
+      </section>
+
+
+      <section id="image-section">
+        <!-- Input for selecting an image -->
+        <input type="file" id="image-input" accept="image/*">
+      </section>
+
+      <!--02 Education Section -->
+
+      <section id="education-information">
+
+        <h2>Education</h2>
+        <textarea id="educationAreaOne" required></textarea>
+        <textarea id="educationAreaTwo"></textarea>
+        <button id="addMoreButton">Add More</button>
+
+      </section>
+
+
+      <!--03 Skills Section -->
+
+
+      <section id="Skills">
+
+
+        <h2>Skills</h2>
+
+        <textarea id="skillAreaOne" required></textarea>
+        <textarea id="skillAreaTwo"></textarea>
+        <button id="skillAddMoreButton">Add More</button>
+
+      </section>
+
+
+
+
+      <!--04 Work Experience  Section -->
+
+
+      <section id="work-experience">
+
+
+        <h2>Work Experience</h2>
+
+        <textarea id="workAreaOne" required></textarea>
+        <textarea id="workAreaTwo"></textarea>
+
+
+        <button id="workAddMoreButton">Add More</button>
+
+      </section>
+      <button type="submit" id="genrate-resume-btn">Generate Resume</button>
+
+
+  </form>
+
+  <div class="image-container">
+
+    <img id="uploaded-image" src="/profilePic.png" alt="Uploaded Image" style="display: none;">
+  </div>
+
+
+
+  <section id="output">
+  </section>
+
+
+
+
+  <!--Extra commented For Milestone 03 -->
+  <!--     
+    <section>
+      <button  id="download-btn" style="display: none;"><i class="fa-solid fa-print"></i>PRINT</button>
+      <button  id="share-btn" style="display: none;"><i class="fa-solid fa-share"></i>SHARE</button>
+    </section>
+     -->
+
+  </div>
+
+
+
+  <!-- Link to the JavaScript file -->
+
+
+
+  <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
