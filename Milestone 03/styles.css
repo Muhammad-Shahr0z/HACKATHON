@@ -131,8 +131,6 @@ pre{
 }
 
 
-
-
 pre i{
   font-size: 1rem;  
 }
@@ -209,24 +207,7 @@ margin-bottom: 20px;
   justify-content: center;
 
 }   
- 
-
-
-  
-  /* Text Area Styling */
-  #education-information textarea{
-    width: auto;
-    height: 65px;
-    border-radius: 8px;
-    margin-bottom: 20px; ;
-    resize: none;
-    outline: none;
-    border: 1px solid rgba(32, 176, 247, 0.2);;
-    
-  } 
-
-
-#educationAreaTwo{
+ #educationAreaTwo{
 
 display: none;
 }
@@ -249,18 +230,18 @@ display: none;
   justify-content: center;
 
 }   
- 
 
-#Skills textarea{
-
-width: auto;
-height: 65px;
-border-radius: 8px;
-margin-bottom: 20px; ;
-resize: none;
-outline: none;
-border: 1px solid rgba(32, 176, 247, 0.2);;
-  
+/* Text Area Styling */
+textarea{
+  width: auto;
+  height: 65px;
+  border-radius: 8px;
+  margin-bottom: 20px; ;
+  resize: none;
+  outline: none;
+  border: 1px solid rgba(32, 176, 247, 0.2);;
+  font-size: 1.5rem;
+  padding: 20px;
 }
 
 /* Work Experience Styling */
@@ -278,20 +259,6 @@ border: 1px solid rgba(32, 176, 247, 0.2);;
   justify-content: center;
 
 }
-
-
-#work-experience textarea{
-
-  width: auto;
-  height: 65px;
-  border-radius: 8px;
-  margin-bottom: 20px; ;
-  resize: none;
-  outline: none;
-  border: 1px solid rgba(32, 176, 247, 0.2);;
-    
-  }
-
 
 /* image section */
 
