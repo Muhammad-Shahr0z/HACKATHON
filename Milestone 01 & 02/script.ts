@@ -1,25 +1,20 @@
-"use strict";
+const skillsDisplay:HTMLDivElement = document.getElementById('skills') as HTMLDivElement
+const skillsButton:HTMLButtonElement = document.getElementById('toggle-skills') as HTMLButtonElement
+skillsButton.addEventListener("click" , ()=>{
 
-// Function to toggle visibility of the Skills section
-function toggleSkillsVisibility(): void {
-    const skillsSection = document.getElementById('skills') as HTMLElement;
-    const toggleSkillsButton = document.getElementById('toggle-skills') as HTMLButtonElement;
+  if (skillsButton.innerHTML == "Show Skills") {
 
-    if (skillsSection && toggleSkillsButton) {
-        if (skillsSection.style.display === 'none' || skillsSection.style.display === '') {
-            skillsSection.style.display = 'block';
-            toggleSkillsButton.textContent = 'Hide Skills';
-        } else {
-            skillsSection.style.display = 'none';
-            toggleSkillsButton.textContent = 'Show Skills';
-        }
-    }
-}
+    skillsDisplay.style.display = "block"
+    skillsButton.innerHTML = "Hide Skills"
+    
+  }else{
 
-// Add event listener to the button after the DOM content is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleSkillsButton = document.getElementById('toggle-skills') as HTMLButtonElement;
-    if (toggleSkillsButton) {
-        toggleSkillsButton.addEventListener('click', toggleSkillsVisibility);
-    }
-});
+     skillsButton.innerHTML = "Show Skills"
+       skillsDisplay.style.display = "none"
+  }
+    
+})
+
+
+
+
