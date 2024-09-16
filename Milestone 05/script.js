@@ -141,14 +141,7 @@ function generateLink() {
                 navigator.share({
                     title: 'My Resume',
                     url: shareableLink_1,
-                }).then(function () {
-                    console.log('Resume shared successfully!');
-                }).catch(function (error) {
-                    console.error('Error sharing:', error);
                 });
-            }
-            else {
-                alert('Share functionality is not supported in this browser.');
             }
         };
     }
