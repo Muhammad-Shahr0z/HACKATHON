@@ -293,13 +293,7 @@ function generateLink(): void {
         navigator.share({
           title: 'My Resume',
           url: shareableLink,
-        }).then(() => {
-          console.log('Resume shared successfully!');
-        }).catch((error) => {
-          console.error('Error sharing:', error);
-        });
-      } else {
-        alert('Share functionality is not supported in this browser.');
+        })
       }
     };
   } 
