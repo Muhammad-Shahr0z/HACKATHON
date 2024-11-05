@@ -1,12 +1,12 @@
-var skillsDisplay = document.getElementById('skills');
-var skillsButton = document.getElementById('toggle-skills');
-skillsButton.addEventListener("click", function () {
-    if (skillsButton.innerHTML == "Show Skills") {
-        skillsDisplay.style.display = "block";
-        skillsButton.innerHTML = "Hide Skills";
+var languageDiv = document.querySelector('#language-div');
+var toggleButton = document.querySelector("button");
+toggleButton.addEventListener("click", function () {
+    if (toggleButton.innerText == "Hide Languages") {
+        toggleButton.innerText = "Show Languages";
+        languageDiv.style.display = "none";
     }
     else {
-        skillsButton.innerHTML = "Show Skills";
-        skillsDisplay.style.display = "none";
+        toggleButton.innerText = "Hide Languages";
+        languageDiv.style.display = "unset";
     }
 });

@@ -1,19 +1,20 @@
-const skillsDisplay:HTMLDivElement = document.getElementById('skills') as HTMLDivElement
-const skillsButton:HTMLButtonElement = document.getElementById('toggle-skills') as HTMLButtonElement
-skillsButton.addEventListener("click" , ()=>{
+const languageDiv = document.querySelector('#language-div') as HTMLDivElement;
+const toggleButton = document.querySelector("button") as HTMLButtonElement
 
-  if (skillsButton.innerHTML == "Show Skills") {
-
-    skillsDisplay.style.display = "block"
-    skillsButton.innerHTML = "Hide Skills"
-    
-  }else{
-
-     skillsButton.innerHTML = "Show Skills"
-       skillsDisplay.style.display = "none"
-  }
-    
+toggleButton.addEventListener("click" , ()=>{
+    if(toggleButton.innerText == "Hide Languages"){
+        toggleButton.innerText = "Show Languages"
+        languageDiv.style.display = "none"
+    }else{
+    toggleButton.innerText = "Hide Languages"
+         languageDiv.style.display = "unset"
+    }
 })
+
+
+
+
+
 
 
 
