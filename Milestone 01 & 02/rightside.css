@@ -1,9 +1,8 @@
     /* right side div  */
      .right-div{
-
     height: 100%;
     width: 60%;
-    background-color:white;
+    background-color:whitesmoke;
     padding: 40px 20px;
 
     }
@@ -12,6 +11,7 @@
     margin: 40px 0px;
     font-size: 1.4rem;
     }
+
     h2 i{
     margin-right :10px; ;
     color: black;
@@ -33,7 +33,7 @@
       }
     h1 span{
         font-size: 2rem;
-        color:  rgb(255, 136, 0);
+        color:rgb(255, 136, 0);
         font-weight: 900;
         letter-spacing: 1px;
     }
@@ -122,8 +122,102 @@ button{
     box-shadow: 1px 1px 3px black;
     transition: transform 0.3s ease;
     letter-spacing: 2px;
+    margin-left: 10px;
 }
 button:active{
  transform: scale(.9);
+}
+
+
+
+
+@media (max-width:768px) {
+
+    .right-div{
+        height: unset;
+        }
+
+
+    /* right side div  */
+    .right-div{
+        padding: 20px 10px;
+    
+        }
+    
+
+    .right-div h2{
+
+    margin: 15px 0px;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0px;
+
+    }
+
+
+        h6{
+              margin-top: 5px;
+               font-size:.8rem;
+     }
+
+     h1 {
+        font-size: 1.2rem;
+        font-weight:800;
+        letter-spacing: 0px;
+
+      }
+    h1 span{
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: 0px;
+
+    }
+
+
+    .right-div p{
+
+        font-size: .5rem;
+        font-weight: 500;
+    }
+
+
+    .education-title{
+        color:black ;
+        font-weight: 600;
+        font-size: .7rem;
+        letter-spacing: 0px;
+    }
+    
+    .education-detail{
+        color:rgb(65, 60, 60) !important;
+        font-size: .7rem;
+        margin-top: 5px;
+        letter-spacing: 0px;
+    }
+/* experience Section */
+
+.experience-div{
+    margin-bottom: 20px;
+}
+
+
+
+.job-title{
+    color:black ;
+    font-weight: 600;
+    font-size: .8rem;
+    }
+
+.job-detail{
+    color:rgb(65, 60, 60) !important;
+    font-size: .6rem;
+    margin-top: 5px;
+}
+
+.language{
+    font-size: .6rem;
+
+}
+
 }
 

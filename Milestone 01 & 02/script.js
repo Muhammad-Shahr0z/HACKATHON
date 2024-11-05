@@ -1,5 +1,6 @@
 var languageDiv = document.querySelector('#language-div');
 var toggleButton = document.querySelector("button");
+var printButton = document.querySelector("#print-button");
 toggleButton.addEventListener("click", function () {
     if (toggleButton.innerText == "Hide Languages") {
         toggleButton.innerText = "Show Languages";
@@ -9,4 +10,7 @@ toggleButton.addEventListener("click", function () {
         toggleButton.innerText = "Hide Languages";
         languageDiv.style.display = "unset";
     }
+});
+printButton.addEventListener("click", function () {
+    window.print();
 });
