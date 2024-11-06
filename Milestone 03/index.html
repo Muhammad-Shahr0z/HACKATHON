@@ -4,148 +4,244 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume - By Muhammad Shahroz</title>
+  <title>Resume Builder - By Muhammad Shahroz</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- FONT AWESOME  -->
+  <link rel="stylesheet" href="leftside.css" />
+  <link rel="stylesheet" href="rightside.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="print.css">
 </head>
 
 <body>
 
+  <!-- Main Container Of Resume Builder  -->
+  <div class="resume-container">
 
-  <form id="resumeForm">
 
-    <div class="main-container" id="container">
-      <h1>Resume Builder</h1>
-      <p class="topPeragraph">Designed and developed by <b>Muhammad Shahroz</b></p>
-      <ul>
-        <a href="https://www.facebook.com/muhammad.shahroz.58/" target="_blank"><i
-            class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.linkedin.com/in/muhammad-shahroz-a35b68292/" target="_blank"><i
-            class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/Muhammad-Shahr0z"><i class="fa-brands fa-github" target="_blank"></i></a>
+
+
+
+    <!-- left side div  -->
+    <div class="left-div">
+
+
+
+
+
+      <!-- Porfile Picutre Div 01 -->
+      <div class="profile-pic-div">
+        <img class="image" src="/shahrozpic.jpg" alt="Profile Picture">
+      </div>
+
+
+
+
+
+
+      <!-- Contact Information Div 02 -->
+
+      <div class="contact-info-div">
+
+        <h2>CONTACT INFO</h2>
+
+        <form>
+
+          <p><span class="icon"><i class="fa-solid fa-phone"></i></span><span>03003666930</span></p>
+          <p><span class="icon"><i class="fa-solid fa-envelope"></i></span><span>SHAHROXYT@GMAIL.COM</span></p>
+          <p><span class="icon"><i class="fa-solid fa-location-dot"></i></span><span>KARACHI PAKISTAN</span></p>
+          <p><span class="icon"><i class="fa-solid fa-id-card"></i></span><span>4220-000004454-3</span></p>
+        </form>
+
+      </div>
+
+
+
+      <div class="skills-div">
+
+        <h2>SKILLS</h2>
+
+        <div class="skills-bar">
+          <div class="skills-percentage">
+            <div>HTML</div>
+            <div>90%</div>
+          </div>
+          <div class="outer-bar">
+            <div class="inner-bar" style="width: 90%"></div>
+          </div>
+        </div>
+
+        <div class="skills-bar">
+          <div class="skills-percentage">
+            <div>CSS</div>
+            <div>85%</div>
+          </div>
+          <div class="outer-bar">
+            <div class="inner-bar" style="width:85%"></div>
+          </div>
+        </div>
+
+        <div class="skills-bar">
+          <div class="skills-percentage">
+            <div>JAVA SCRIPT</div>
+            <div>80%</div>
+          </div>
+          <div class="outer-bar">
+            <div class="inner-bar" style="width:80%"></div>
+          </div>
+        </div>
+
+        <div class="skills-bar">
+          <div class="skills-percentage">
+            <div>TYPE SCRIPT</div>
+            <div>75%</div>
+          </div>
+          <div class="outer-bar">
+            <div class="inner-bar" style="width:75%"></div>
+          </div>
+        </div>
+
+        <div class="skills-bar">
+          <div class="skills-percentage">
+            <div>REACT JS</div>
+            <div>70%</div>
+          </div>
+          <div class="outer-bar">
+            <div class="inner-bar" style="width:70%"></div>
+          </div>
+        </div>
+
+        <div class="skills-bar">
+          <div class="skills-percentage">
+            <div>NEXT JS</div>
+            <div>70%</div>
+          </div>
+          <div class="outer-bar">
+            <div class="inner-bar" style="width:70%"></div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+      <!-- left side div ENDED  -->
+    </div>
+
+
+
+
+    <!-- right side div  -->
+    <div class="right-div">
+
+
+      <!-- Full Name Section`      -->
+      <div class="full-name">
+        <hr>
+        <hr>
+        <hr>
+        <hr style="margin-bottom: 25px;">
+        <h6>Frontend Developer</h6>
+        <h1>Muhammad <span>Shahroz</span></h1>
+        <p>A dedicated professional committed to growth and excellence.</p>
+        <hr class="border">
+        <hr style="border: 2px solid black;">
+      </div>
+
+
+
+      <!-- Education Section -->
+
+      <h2><i class="fa-solid fa-school" style="color: black;"></i>EDUCATIONS</h2>
+
+      <ul class="education-div">
+        <li class="education-title">Matriculation in Science (Biology)</li>
+        <li class="education-detail">XYZ School, Karachi, Pakistan
+          Completed: 2012</li>
       </ul>
 
+      <ul class="education-div">
+        <li class="education-title">Diploma of Associate Engineering</li>
+        <li class="education-detail">New Port Institute of Technology and Science, Karachi, Pakistan
+          Completed: 2015</li>
+      </ul>
+
+      <ul class="education-div">
+        <li class="education-title">Bachelor of Science in Computer Science</li>
+        <li class="education-detail">XYZ University, Karachi, Pakistan Completed: 2020</li>
+      </ul>
+      <hr>
+
+
+
+      <!-- Experience Section -->
+
+      <h2><i class="fa-solid fa-briefcase"></i>WORK EXPERIENCE</h2>
+
+      <ul class="experience-div">
+        <li class="job-title">Data Entry & ERP Operator</li>
+        <li class="job-detail">Skilled in data entry and ERP Experience: 2 Years At J Dot</li>
+      </ul>
+
+      <ul class="experience-div">
+        <li class="job-title">Jewelry Designer
+        </li>
+        <li class="job-detail">Self-Employed (Offline & Online)
+          2019 - 2022
+        </li>
+
+      </ul>
+
+      <hr>
+
+
+      <div id="language-div">
+        <h2><i class="fa-solid fa-language"></i></i>LANGUAGES
+        </h2>
+
+        <ul class="language-div">
+          <li class="language">URDU</li>
+          <li class="language">ENGLISH (BASICS)</li>
+        </ul>
+      </div>
+
+      <button id="hide-lang-button">Hide Languages</button>
+      <button id="print-button">Print</button>
+      <hr>
+
+
+      <!-- right side div ENDED  -->
+    </div>
 
 
 
 
-      <!--01 Personal Information Section -->
-      <section id="personal-information" style="display: flex;">
-
-        <h2>Personal Information</h2>
-        <!--01 Full Name -->
-
-        <strong>Full Name:</strong>
-        <input id="fname" type="text" class="fullName" placeholder="Enter Your Full Name" required>
-
-
-        <!--02 Email Adress -->
-
-        <strong>Email Address:</strong>
-        <input id="email" type="email" class="emailAdress" placeholder="Enter Your Email Address " required>
-
-        <!--03 Mobile Number  -->
-
-        <strong>Mobile Number:</strong>
-        <input id="mobileNumber" type="number" class="mobileNumber" placeholder="Enter Your Mobile Number" required>
-
-        <!--04 Full Address -->
-
-        <strong>Full Address:</strong>
-        <input id="fullAddress" type="text" class="fullAdress" placeholder="Enter Your Full Address" required>
-
-      </section>
-
-
-      <section id="image-section">
-        <!-- Input for selecting an image -->
-        <input type="file" id="image-input" accept="image/*">
-      </section>
-
-      <!--02 Education Section -->
-
-      <section id="education-information">
-
-        <h2>Education</h2>
-        <textarea id="educationAreaOne" required></textarea>
-        <textarea id="educationAreaTwo"></textarea>
-        <button id="addMoreButton">Add More</button>
-
-      </section>
-
-
-      <!--03 Skills Section -->
-
-
-      <section id="Skills">
-
-
-        <h2>Skills</h2>
-
-        <textarea id="skillAreaOne" required></textarea>
-        <textarea id="skillAreaTwo"></textarea>
-        <button id="skillAddMoreButton">Add More</button>
-
-      </section>
 
 
 
 
-      <!--04 Work Experience  Section -->
-
-
-      <section id="work-experience">
-
-
-        <h2>Work Experience</h2>
-
-        <textarea id="workAreaOne" required></textarea>
-        <textarea id="workAreaTwo"></textarea>
-
-
-        <button id="workAddMoreButton">Add More</button>
-
-      </section>
-      <button type="submit" id="genrate-resume-btn">Generate Resume</button>
-
-
-  </form>
-
-  <div class="image-container">
-
-    <img id="uploaded-image" src="/profilePic.png" alt="Uploaded Image" style="display: none;">
-  </div>
-
-
-
-  <section id="output">
-  </section>
 
 
 
 
-  <!--Extra commented For Milestone 03 -->
-  <!--     
-    <section>
-      <button  id="download-btn" style="display: none;"><i class="fa-solid fa-print"></i>PRINT</button>
-      <button  id="share-btn" style="display: none;"><i class="fa-solid fa-share"></i>SHARE</button>
-    </section>
-     -->
-
-  </div>
 
 
 
-  <!-- Link to the JavaScript file -->
 
 
 
-  <script src="script.js"></script>
 
 
+
+
+
+
+
+
+    <script src="script.js"></script>
 
 </body>
 

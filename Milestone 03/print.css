@@ -1,0 +1,262 @@
+@media print {
+  @page {
+    size: A4;
+    margin: 0px 0px;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    max-width: 794px !important;
+    max-height: 1123px !important;
+    overflow-x: hidden;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .resume-container * {
+    visibility: visible;
+  }
+
+  #print-button {
+    display: none;
+  }
+  #hide-lang-button {
+    display: none;
+  }
+
+  .resume-container {
+    max-width: 792px !important;
+    max-height: 1121px !important;
+    margin: 0 !important;
+    page-break-inside: avoid;
+  }
+
+  .left-div {
+    height: 1123px !important;
+    width: 40% !important;
+    background-color: #121d2e !important;
+  }
+
+  .profile-pic-div {
+    width: 250px !important;
+    height: 250px !important;
+    overflow: hidden !important;
+    border-radius: 50% !important;
+    border: 3px solid white !important;
+    margin: auto !important;
+    padding: 5px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    caret-color: transparent !important;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+  }
+
+  img {
+    width: 99% !important;
+    height: auto !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+  }
+
+  .contact-info-div h2 {
+    width: 100% !important;
+    padding: 10px !important;
+    text-align: center !important;
+    background-color: #3f454d !important;
+    letter-spacing: 2px !important;
+  }
+
+  .contact-info-div form {
+    margin: 40px auto !important;
+    display: flex !important;
+    height: 200px !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: start !important;
+    padding-left: 10px !important;
+  }
+
+  form .icon {
+    width: 30px !important;
+    height: 30px !important;
+    background-color: rgb(255, 136, 0) !important;
+    display: flex !important;
+    margin-right: 15px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 50% !important;
+  }
+
+  form p {
+    display: flex !important;
+    justify-content: start !important;
+    align-items: center !important;
+    font-size: 1rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  form p i {
+    color: black !important;
+  }
+
+  .skills-div {
+    width: 100% !important;
+    height: 450px !important;
+  }
+
+  .skills-div h2 {
+    width: 100% !important;
+    padding: 10px !important;
+    text-align: center !important;
+    background-color: #3f454d !important;
+    margin-bottom: 40px !important;
+  }
+
+  .skills-bar {
+    padding: 5px 10px !important;
+  }
+
+  .skills-percentage {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0px 4px !important;
+    margin-bottom: 5px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .outer-bar {
+    background-color: #3f454d !important;
+    width: 100% !important;
+    padding: 3px 0px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+  }
+
+  .inner-bar {
+    height: 15px !important;
+    background-color: rgb(255, 136, 0) !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+  }
+
+  .right-div {
+    height: 1123px !important;
+    width: 60% !important;
+    padding: 40px 20px !important;
+  }
+
+  .right-div h2 {
+    margin: 40px 0px !important;
+    font-size: 1.4rem !important;
+  }
+
+  h2 i {
+    margin-right: 10px !important;
+    color: black !important;
+  }
+
+  h6 {
+    margin-top: 20px !important;
+    color: black !important;
+    font-size: 1.1rem !important;
+    color: rgb(101, 96, 96) !important;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+    color: black !important;
+    font-weight: 900 !important;
+    letter-spacing: 1px !important;
+  }
+
+  h1 span {
+    font-size: 2rem !important;
+    color: rgb(255, 136, 0) !important;
+    font-weight: 900 !important;
+    letter-spacing: 1px !important;
+  }
+
+  hr {
+    margin-bottom: 3px !important;
+    border: 1px solid rgb(255, 136, 0) !important;
+  }
+
+  .right-div p {
+    color: rgb(101, 96, 96) !important;
+    font-size: 0.8rem !important;
+    font-weight: bold !important;
+  }
+
+  .border {
+    margin-top: 25px !important;
+    border: 5px solid rgb(255, 136, 0) !important;
+  }
+
+  .education-div {
+    margin-bottom: 30px !important;
+  }
+
+  .education-title {
+    color: black !important;
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+  }
+
+  .education-detail {
+    color: rgb(65, 60, 60) !important;
+    font-size: 0.9rem !important;
+    margin-top: 5px !important;
+  }
+
+  .experience-div {
+    margin-bottom: 30px !important;
+  }
+
+  .job-title {
+    color: black !important;
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+  }
+
+  .job-detail {
+    color: rgb(65, 60, 60) !important;
+    font-size: 0.9rem !important;
+    margin-top: 5px !important;
+  }
+
+  .language-div {
+    margin-bottom: 40px !important;
+  }
+
+  .language {
+    color: black !important;
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  button {
+    outline: none !important;
+    background-color: rgb(255, 136, 0) !important;
+    color: white !important;
+    font-weight: 400 !important;
+    font-size: 0.6rem !important;
+    padding: 8px 10px !important;
+    border-radius: 6px !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin-bottom: 10px !important;
+    margin-top: 7px !important;
+    box-shadow: 1px 1px 3px black !important;
+    transition: transform 0.3s ease !important;
+    letter-spacing: 2px !important;
+  }
+
+  button:active {
+    transform: scale(0.9) !important;
+  }
+}
