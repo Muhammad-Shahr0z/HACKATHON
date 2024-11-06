@@ -166,11 +166,12 @@
     color: rgb(101, 96, 96) !important;
   }
 
-  h1 {
+  h1 :first-child{
     font-size: 2rem !important;
     color: black !important;
     font-weight: 900 !important;
     letter-spacing: 1px !important;
+    margin-right: 8px;
   }
 
   h1 span {
@@ -237,26 +238,5 @@
     font-weight: 800 !important;
     font-size: 1rem !important;
     margin-bottom: 10px !important;
-  }
-
-  button {
-    outline: none !important;
-    background-color: rgb(255, 136, 0) !important;
-    color: white !important;
-    font-weight: 400 !important;
-    font-size: 0.6rem !important;
-    padding: 8px 10px !important;
-    border-radius: 6px !important;
-    border: none !important;
-    cursor: pointer !important;
-    margin-bottom: 10px !important;
-    margin-top: 7px !important;
-    box-shadow: 1px 1px 3px black !important;
-    transition: transform 0.3s ease !important;
-    letter-spacing: 2px !important;
-  }
-
-  button:active {
-    transform: scale(0.9) !important;
   }
 }

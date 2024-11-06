@@ -1,0 +1,180 @@
+body{
+    background-color:gray;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-container{
+    background-color:white;
+    height: fit-content;
+    width: 794px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.459);
+    padding:20px;
+    margin: 40px;
+    border-radius: 10px;
+}
+   
+
+.form-container label{
+color:#007BFF;
+text-align: start;
+align-self: start;
+font-weight: 800;
+margin-bottom: 5px ;
+margin-left: 4px;
+font-size: 1.45rem;
+}
+
+.form-container h1{
+    text-align: center;
+    margin: 40px 0px;
+    font-weight: 900;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color:#007BFF;
+    
+
+}
+
+
+.form-container input{
+color: black;
+height: 50px;
+width:100%;
+margin-bottom: 20px;
+padding: 10px;
+border-radius:5px;
+outline: none;
+border:1px solid #007BFF;
+box-shadow: 1px 1px 5px #007BFF;
+text-transform: capitalize;
+font-size: 1.2rem;
+outline:unset !important;
+}
+
+.Education-Section,
+.Experience-Section,
+.Skills-Section
+{
+    width: 100%;
+}
+
+
+.genrateButton{
+    all: unset;
+    height: fit-content;
+    width: 100%;
+    margin: 6px 0px;
+    background-color: #007BFF;
+    padding: 10px 0px;
+    text-align: center;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+
+
+.addMoreButton{
+    all: unset;
+    align-self: start;
+    margin: 0;
+    margin-bottom:20px;
+    background-color: #007BFF;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.addMoreButton:hover{
+
+    margin-bottom:20px;
+    background-color: #255ee0;
+
+}
+
+
+
+.Education-Section input{
+width: 49%;
+}
+
+.Experience-Section input{
+    width: 49%; 
+}
+
+
+.Skills-Section input{
+    width: 49%; 
+}
+
+
+.inputWrape{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:794px){
+    .form-container{
+        width:100vw;
+        padding: 10px 10px;
+
+    }
+
+    .form-container h1{
+
+        font-weight: 900;
+        font-size: 1.5rem;
+    
+    }
+
+    .form-container input{
+     
+        height:52px;
+        font-size: 12px;
+        }
+
+
+        .Education-Section input::placeholder{
+            font-size: 10px;
+        }
+        .Experience-Section input::placeholder{
+            font-size: 10px;
+        }
+        .Skills-Section input::placeholder{
+            font-size: 10px;
+        }
+
+
+
+        .form-container label{
+            font-size: 1.3rem;
+            }
+        
+        .form-container{
+           margin: 0;
+           border-radius:unset;
+        }
+        
+
+
+}

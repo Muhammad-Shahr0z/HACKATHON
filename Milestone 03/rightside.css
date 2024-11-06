@@ -23,17 +23,20 @@ h6 {
   color: rgb(101, 96, 96) !important;
 }
 
-h1 {
+h1 :first-child{
   font-size: 2rem;
   color: black;
   font-weight: 900;
   letter-spacing: 1px;
+  margin-right: 8px;
+  text-transform: capitalize;
 }
 h1 span {
   font-size: 2rem;
   color: rgb(255, 136, 0);
   font-weight: 900;
   letter-spacing: 1px;
+  text-transform: capitalize;
 }
 
 hr {
@@ -116,7 +119,12 @@ button {
   margin-left: 10px;
 }
 button:active {
-  transform: scale(0.95);
+  transform: scale(.99);
+}
+
+
+#jobField{
+  text-transform: capitalize;
 }
 
 @media (max-width: 768px) {

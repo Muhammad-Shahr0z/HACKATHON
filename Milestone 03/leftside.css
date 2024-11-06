@@ -37,6 +37,8 @@ img{
     text-align: center;
     background-color: #3f454d;;
     letter-spacing: 2px;
+    text-transform:uppercase;
+    
 }
 
 .contact-info-div form{
@@ -70,11 +72,24 @@ form p{
     align-items: center;
     font-size: 1rem;
     letter-spacing: 1px;
+    text-transform: capitalize;
+    width: 100%;
+    word-wrap: break-word; 
+    word-break: break-word;
+    margin-bottom: 10px;
+
 }
 
 form p i{
     color: black !important;
+
 }
+
+.resume-form p :first-child{
+    flex-shrink: 0;
+}
+
+
 
 
 /* SKILLS SECTION */
@@ -109,6 +124,7 @@ form p i{
     padding: 0px 4px;
     margin-bottom: 5px;
     font-size: .8rem;
+    text-transform: uppercase;
 
 }
 
@@ -119,17 +135,17 @@ form p i{
     padding: 3px 0px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    margin-bottom: 5px;
 
 }
 
 .inner-bar{
-    height: 15px;
+    height: 12px;
     background-color:  rgb(255, 136, 0) !important;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
  
 }
-
 
 
 

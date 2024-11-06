@@ -8,18 +8,19 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="leftside.css" />
   <link rel="stylesheet" href="rightside.css" />
+  <link rel="stylesheet" href="form.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="print.css">
 </head>
 
 <body>
 
-  <!-- Main Container Of Resume Builder  -->
-  <div class="resume-container">
 
+  <!-- Main Container Of Resume Builder Templete  -->
 
+<div class="resume-container" style="display: none;">
 
 
 
@@ -44,14 +45,15 @@
 
       <div class="contact-info-div">
 
-        <h2>CONTACT INFO</h2>
+        <h2>contact info</h2>
 
-        <form>
-
-          <p><span class="icon"><i class="fa-solid fa-phone"></i></span><span>03003666930</span></p>
-          <p><span class="icon"><i class="fa-solid fa-envelope"></i></span><span>SHAHROXYT@GMAIL.COM</span></p>
-          <p><span class="icon"><i class="fa-solid fa-location-dot"></i></span><span>KARACHI PAKISTAN</span></p>
-          <p><span class="icon"><i class="fa-solid fa-id-card"></i></span><span>4220-000004454-3</span></p>
+        <form class="resume-form">
+          <p><span class="icon"><i class="fa-solid fa-phone"></i></span><span id="userPhone">phone number</span></p>
+          <p><span class="icon"><i class="fa-solid fa-envelope"></i></span><span id="userEmail">email address</span></p>
+          <p><span class="icon"><i class="fa-solid fa-location-dot"></i></span><span id="userAddress">full
+              address</span></p>
+          <p><span class="icon"><i class="fa-solid fa-id-card"></i></span><span id="userID">national id card no</span>
+          </p>
         </form>
 
       </div>
@@ -61,81 +63,44 @@
       <div class="skills-div">
 
         <h2>SKILLS</h2>
+        <div class="skills-bar" id="skills">
 
-        <div class="skills-bar">
           <div class="skills-percentage">
             <div>HTML</div>
             <div>90%</div>
           </div>
-          <div class="outer-bar">
-            <div class="inner-bar" style="width: 90%"></div>
-          </div>
-        </div>
 
-        <div class="skills-bar">
+          <div class="outer-bar">
+            <div class="inner-bar" style="width: 20%"></div>
+          </div>
+
           <div class="skills-percentage">
-            <div>CSS</div>
-            <div>85%</div>
+            <div>HTML</div>
+            <div>90%</div>
           </div>
-          <div class="outer-bar">
-            <div class="inner-bar" style="width:85%"></div>
-          </div>
-        </div>
 
-        <div class="skills-bar">
+          <div class="outer-bar">
+            <div class="inner-bar" style="width: 20%"></div>
+          </div>
+
           <div class="skills-percentage">
-            <div>JAVA SCRIPT</div>
-            <div>80%</div>
+            <div>HTML</div>
+            <div>90%</div>
           </div>
-          <div class="outer-bar">
-            <div class="inner-bar" style="width:80%"></div>
-          </div>
-        </div>
 
-        <div class="skills-bar">
-          <div class="skills-percentage">
-            <div>TYPE SCRIPT</div>
-            <div>75%</div>
-          </div>
           <div class="outer-bar">
-            <div class="inner-bar" style="width:75%"></div>
+            <div class="inner-bar" style="width: 20%"></div>
           </div>
-        </div>
 
-        <div class="skills-bar">
-          <div class="skills-percentage">
-            <div>REACT JS</div>
-            <div>70%</div>
-          </div>
-          <div class="outer-bar">
-            <div class="inner-bar" style="width:70%"></div>
-          </div>
-        </div>
 
-        <div class="skills-bar">
-          <div class="skills-percentage">
-            <div>NEXT JS</div>
-            <div>70%</div>
-          </div>
-          <div class="outer-bar">
-            <div class="inner-bar" style="width:70%"></div>
-          </div>
         </div>
-
       </div>
-
-
-
-
 
       <!-- left side div ENDED  -->
     </div>
-
-
-
-
     <!-- right side div  -->
     <div class="right-div">
+
 
 
       <!-- Full Name Section`      -->
@@ -144,8 +109,8 @@
         <hr>
         <hr>
         <hr style="margin-bottom: 25px;">
-        <h6>Frontend Developer</h6>
-        <h1>Muhammad <span>Shahroz</span></h1>
+        <h6 id="profession">profession</h6>
+        <h1><span id="firstUserName">first name</span><span id="lastUserName">last name</span></h1>
         <p>A dedicated professional committed to growth and excellence.</p>
         <hr class="border">
         <hr style="border: 2px solid black;">
@@ -156,24 +121,14 @@
       <!-- Education Section -->
 
       <h2><i class="fa-solid fa-school" style="color: black;"></i>EDUCATIONS</h2>
-
       <ul class="education-div">
         <li class="education-title">Matriculation in Science (Biology)</li>
         <li class="education-detail">XYZ School, Karachi, Pakistan
           Completed: 2012</li>
       </ul>
 
-      <ul class="education-div">
-        <li class="education-title">Diploma of Associate Engineering</li>
-        <li class="education-detail">New Port Institute of Technology and Science, Karachi, Pakistan
-          Completed: 2015</li>
-      </ul>
 
-      <ul class="education-div">
-        <li class="education-title">Bachelor of Science in Computer Science</li>
-        <li class="education-detail">XYZ University, Karachi, Pakistan Completed: 2020</li>
-      </ul>
-      <hr>
+
 
 
 
@@ -186,12 +141,6 @@
         <li class="job-detail">Skilled in data entry and ERP Experience: 2 Years At J Dot</li>
       </ul>
 
-      <ul class="experience-div">
-        <li class="job-title">Jewelry Designer
-        </li>
-        <li class="job-detail">Self-Employed (Offline & Online)
-          2019 - 2022
-        </li>
 
       </ul>
 
@@ -204,17 +153,114 @@
 
         <ul class="language-div">
           <li class="language">URDU</li>
-          <li class="language">ENGLISH (BASICS)</li>
+
         </ul>
       </div>
 
-      <button id="hide-lang-button">Hide Languages</button>
-      <button id="print-button">Print</button>
+      <button id="print-button" onclick="PrintResume()">Print</button>
       <hr>
 
 
       <!-- right side div ENDED  -->
     </div>
+
+</div>
+
+
+
+
+
+
+
+ 
+<!-- Main Container Of Resume Builder Form Area -->
+
+
+<form class="form-container">
+  <h1>Generate Your Resume</h1>
+
+
+<label for="">First Name</label>
+<input type="text" id="inputfName" placeholder="Enter Your First Name">
+
+<label for="">Last Name</label>
+<input type="text" id="inputlName" placeholder="Enter Your Last Name">
+
+<label for="">Profession</label>
+<input type="text" id="inputProfession" placeholder="Enter Your Profession">
+
+<label for="">Mobile Number</label>
+<input type="number" id="inputNumber" placeholder="Enter Your Mobile Number">
+
+<label for="">Email Address</label>
+<input type="email" id="inputEmail" placeholder="Enter Your Email Address">
+
+<label for="">CNIC Number</label>
+<input type="number"id="inputCnic" placeholder="Enter Your CNIC Number">
+
+<label for="">Full Address</label>
+<input type="text" id="inputAddress" placeholder="Enter Your Full Address">
+
+
+
+
+<!-- Education SECTION -->
+<label for="">Educations</label>
+<div class="Education-Section">
+
+<div class="inputWrape">
+  <input type="text"class="Education-class"placeholder="Field of study (e.g.,Computer Science)">
+  <input type="text"class="Education-class"placeholder="Degree, institution,and year">
+</div>
+
+</div>
+
+<button type="button" class="addMoreButton" onclick="AddMoreEducations()">Add More</button>
+
+
+
+
+
+<!-- Experience SECTION -->
+<label for="">Experience</label>
+<div class="Experience-Section">
+
+  <div class="inputWrape">
+    <input type="text"class="Experience-class"placeholder="Job Title (e.g., Software Engineer)">
+    <input type="text"class="Experience-class"placeholder="Company, years, key responsibilities">
+  </div>
+
+</div>
+
+<button type="button" class="addMoreButton" onclick="AddMoreExperience()">Add More</button>
+
+
+
+
+<!-- Skills SECTION -->
+<label for="">Skills</label>
+
+<div class="Skills-Section">
+  <div class="inputWrape">
+    <input type="text"class="Skills-class"placeholder="Skill/Expertise (e.g.,HTML,CSS)">
+    <input class="Skills-class"type="number" placeholder="Skill Level (%) 0 to 100 ?" min="0" max="100" oninput="this.value = Math.min(this.value, 100)">
+  </div>
+</div>
+
+<button type="button" class="addMoreButton" onclick="AddMoreSkills()">Add More</button>
+
+
+
+
+
+
+
+
+<button type="submit" class="genrateButton" onclick="GenerateResume(event)">Generate Resume</button>
+
+
+</form>
+
 
 
 
@@ -244,5 +290,9 @@
     <script src="script.js"></script>
 
 </body>
+
+
+
+
 
 </html>

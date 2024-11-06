@@ -11,10 +11,6 @@
 }
 
 
-
-
-
-
 input{
   caret-color: rgb(255, 136, 0);
 }
@@ -31,7 +27,7 @@ input{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: gray; */
+ background-color: white !important;
 }
 
 body::-webkit-scrollbar {
