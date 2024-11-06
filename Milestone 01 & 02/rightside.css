@@ -1,239 +1,208 @@
-    /* right side div  */
-     .right-div{
-    height: 100%;
-    width: 60%;
-    background-color:whitesmoke;
-    padding: 40px 20px;
+/* right side div  */
+.right-div {
+  height: 100%;
+  width: 60%;
+  background-color: whitesmoke;
+  padding: 40px 20px;
+}
 
-    }
+.right-div h2 {
+  margin: 40px 0px;
+  font-size: 1.4rem;
+}
 
-     .right-div h2{
-    margin: 40px 0px;
-    font-size: 1.4rem;
-    }
+h2 i {
+  margin-right: 10px;
+  color: black;
+}
 
-    h2 i{
-    margin-right :10px; ;
-    color: black;
-    }
+h6 {
+  margin-top: 20px;
+  color: black !important;
+  font-size: 1.1rem;
+  color: rgb(101, 96, 96) !important;
+}
 
+h1 {
+  font-size: 2rem;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+h1 span {
+  font-size: 2rem;
+  color: rgb(255, 136, 0);
+  font-weight: 900;
+  letter-spacing: 1px;
+}
 
-    h6{
-        margin-top: 20px;
-        color: black !important;
-        font-size: 1.1rem;
-        color:rgb(101, 96, 96) !important;
-    }
-    
-    h1 {
-        font-size: 2rem;
-        color: black;
-        font-weight:900;
-        letter-spacing: 1px;
-      }
-    h1 span{
-        font-size: 2rem;
-        color:rgb(255, 136, 0);
-        font-weight: 900;
-        letter-spacing: 1px;
-    }
+hr {
+  margin-bottom: 3px;
+  border: 1px solid rgb(255, 136, 0);
+}
 
-    hr{
-        margin-bottom: 3px;
-        border:1px solid rgb(255, 136, 0);
-    }
-    
-    .right-div p{
-        color:rgb(101, 96, 96) !important;
-        font-size: .8rem;
-        font-weight: bold;
-    }
+.right-div p {
+  color: rgb(101, 96, 96) !important;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
 
-    .border{
-
-        margin-top: 25px;
-        border: 5px solid rgb(255, 136, 0);
-    }
+.border {
+  margin-top: 25px;
+  border: 5px solid rgb(255, 136, 0);
+}
 /* education section */
 
-    .education-div{
-        margin-bottom: 30px;
-    }
+.education-div {
+  margin-bottom: 30px;
+}
 
-    .education-title{
-        color:black ;
-        font-weight: 800;
-        font-size: 1rem;
-        }
+.education-title {
+  color: black;
+  font-weight: 800;
+  font-size: 1rem;
+}
 
-    .education-detail{
-        color:rgb(65, 60, 60) !important;
-        font-size: .9rem;
-        margin-top: 5px;
-    }
-
+.education-detail {
+  color: rgb(65, 60, 60) !important;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
 
 /* experience Section */
 
-.experience-div{
-    margin-bottom: 30px;
+.experience-div {
+  margin-bottom: 30px;
 }
 
-
-
-.job-title{
-    color:black ;
-    font-weight: 800;
-    font-size: 1rem;
-    }
-
-.job-detail{
-    color:rgb(65, 60, 60) !important;
-    font-size: .9rem;
-    margin-top: 5px;
+.job-title {
+  color: black;
+  font-weight: 800;
+  font-size: 1rem;
 }
 
-
-.language-div{
-    margin-bottom:40px;
+.job-detail {
+  color: rgb(65, 60, 60) !important;
+  font-size: 0.9rem;
+  margin-top: 5px;
 }
 
-
-.language{
-    color:black ;
-    font-weight: 800;
-    font-size: 1rem;
-    margin-bottom:10px;
+.language-div {
+  margin-bottom: 40px;
 }
 
+.language {
+  color: black;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
 
-button{
+button {
+  outline: none;
+  background-color: rgb(255, 136, 0);
+  color: white;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 7px;
+  box-shadow: 1px 1px 3px black;
+  transition: transform 0.3s ease;
+  letter-spacing: 2px;
+  margin-left: 10px;
+}
+button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .right-div {
+    height: unset;
+  }
+
+  /* right side div  */
+  .right-div {
+    padding: 20px 10px;
+  }
+
+  button {
     outline: none;
     background-color: rgb(255, 136, 0);
     color: white;
-    font-weight: 800;
-    font-size: .8rem;
-    padding: 8px 10px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.7rem;
+    padding: 4px 7px;
+    border-radius: 4px;
     margin-bottom: 10px;
-    margin-top: 7px;
-    box-shadow: 1px 1px 3px black;
-    transition: transform 0.3s ease;
-    letter-spacing: 2px;
-    margin-left: 10px;
-}
-button:active{
- transform: scale(.95);
-}
+    margin-top: 5px;
+    letter-spacing: 0px;
+    margin-left: 5px;
+  }
 
-
-
-
-@media (max-width:768px) {
-
-    .right-div{
-        height: unset;
-        }
-
-
-
-    /* right side div  */
-    .right-div{
-        padding: 20px 10px;
-    
-        }
-
-
-        button{
-            outline: none;
-            background-color: rgb(255, 136, 0);
-            color: white;
-            font-weight: 600;
-            font-size: .7rem;
-            padding: 4px 7px;
-            border-radius: 4px;
-            margin-bottom: 10px;
-            margin-top: 5px;
-            letter-spacing: 0px;
-             margin-left: 5px;
-        }
-    
-
-    .right-div h2{
-
+  .right-div h2 {
     margin: 15px 0px;
     font-size: 1rem;
     font-weight: 800;
     letter-spacing: 0px;
+  }
 
-    }
-
-
-        h6{
-              margin-top: 5px;
-               font-size:.8rem;
-     }
-
-     h1 {
-        font-size: 1.2rem;
-        font-weight:800;
-        letter-spacing: 0px;
-
-      }
-    h1 span{
-        font-size: 1.2rem;
-        font-weight: 800;
-        letter-spacing: 0px;
-
-    }
-
-
-    .right-div p{
-
-        font-size: .5rem;
-        font-weight: 500;
-    }
-
-
-    .education-title{
-        color:black ;
-        font-weight: 600;
-        font-size: .7rem;
-        letter-spacing: 0px;
-    }
-    
-    .education-detail{
-        color:rgb(65, 60, 60) !important;
-        font-size: .7rem;
-        margin-top: 5px;
-        letter-spacing: 0px;
-    }
-/* experience Section */
-
-.experience-div{
-    margin-bottom: 20px;
-}
-
-
-
-.job-title{
-    color:black ;
-    font-weight: 600;
-    font-size: .8rem;
-    }
-
-.job-detail{
-    color:rgb(65, 60, 60) !important;
-    font-size: .6rem;
+  h6 {
     margin-top: 5px;
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0px;
+  }
+  h1 span {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0px;
+  }
+
+  .right-div p {
+    font-size: 0.5rem;
+    font-weight: 500;
+  }
+
+  .education-title {
+    color: black;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0px;
+  }
+
+  .education-detail {
+    color: rgb(65, 60, 60) !important;
+    font-size: 0.7rem;
+    margin-top: 5px;
+    letter-spacing: 0px;
+  }
+  /* experience Section */
+
+  .experience-div {
+    margin-bottom: 20px;
+  }
+
+  .job-title {
+    color: black;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+
+  .job-detail {
+    color: rgb(65, 60, 60) !important;
+    font-size: 0.6rem;
+    margin-top: 5px;
+  }
+
+  .language {
+    font-size: 0.6rem;
+  }
 }
-
-.language{
-    font-size: .6rem;
-
-}
-
-}
-
