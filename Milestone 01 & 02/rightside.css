@@ -125,7 +125,7 @@ button{
     margin-left: 10px;
 }
 button:active{
- transform: scale(.9);
+ transform: scale(.95);
 }
 
 
