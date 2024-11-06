@@ -3,7 +3,6 @@ const toggleButton = document.querySelector("button") as HTMLButtonElement;
 const printButton = document.querySelector("#print-button") as HTMLButtonElement
 
 
-
 toggleButton.addEventListener("click" , ()=>{
     if(toggleButton.innerText == "Hide Languages"){
         toggleButton.innerText = "Show Languages"
@@ -13,7 +12,6 @@ toggleButton.addEventListener("click" , ()=>{
          languageDiv.style.display = "unset"
     }
 })
-
 
 printButton.addEventListener("click" , ()=>{
         window.print()
