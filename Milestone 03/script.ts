@@ -3,16 +3,12 @@
 
 // Profile Picture Handling
 let resumeImage: HTMLImageElement = document.getElementById("resumeImage") as HTMLImageElement;
-let resumeImageShows: HTMLImageElement = document.getElementById("resumeImageShows") as HTMLImageElement;
 let inputImage: HTMLInputElement = document.getElementById("inputImage") as HTMLInputElement;
 
 
 inputImage.onchange = () => {
-let showImageDiv:HTMLDivElement = document.getElementById('showImageDiv') as HTMLDivElement
-showImageDiv.style.display = "block"
       if (inputImage.files && inputImage.files[0]) {
         resumeImage.src = URL.createObjectURL(inputImage.files[0]);
-        resumeImageShows.src = URL.createObjectURL(inputImage.files[0]);
       }
 
 };
