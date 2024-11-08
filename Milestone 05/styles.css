@@ -120,6 +120,9 @@ li {
   border: 1px solid green !important;
 }
 
+
+
+
 @media (max-width: 768px) {
   .resume-container {
     height: fit-content;
@@ -135,4 +138,18 @@ li {
     margin-left: 5px;
     font-weight: 700;
   }
+  
+  .checkbox-lang label{
+    font-size: 1.2rem !important;
+    margin: 0px;
+  }
+  
+  
+  input[type="checkbox"]{
+    width: 20px !important;
+    height: 20px !important;
+  font-size: .6rem;
+  }
+  
 }
+
