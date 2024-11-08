@@ -125,12 +125,12 @@ button:active {
   text-transform: capitalize;
 }
 
-#print-button{
+#print-button {
   padding: 8px 50px;
   font-size: large;
 }
-#print-button:hover{
-background-color:#124c89;
+#print-button:hover {
+  background-color: #124c89;
 }
 
 @media (max-width: 768px) {
