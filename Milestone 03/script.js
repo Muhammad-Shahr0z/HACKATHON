@@ -7,7 +7,7 @@ inputImage.onchange = () => {
         resumeImage.src = URL.createObjectURL(inputImage.files[0]);
     }
 };
-let GenerateResumeButton = document.getElementById('genrateBtn');
+let GenerateResumeButton = document.getElementById("genrateBtn");
 const allInputsField = document.querySelectorAll("input[required]");
 const checkAllInput = () => {
     let IsValid = true;
@@ -15,10 +15,10 @@ const checkAllInput = () => {
     allFields.forEach((field) => {
         if (field.value.trim() === "") {
             IsValid = false;
-            field.classList.add('error');
+            field.classList.add("error");
         }
         else {
-            field.classList.remove('error');
+            field.classList.remove("error");
             // field.classList.add('greenClass')
         }
     });
@@ -160,8 +160,8 @@ const GenerateResumeFunction = (e) => {
         skillsContainer.innerHTML = skillsLoop;
     }
     //Hide container-form input fields if genrated resume button clicked
-    const FormContainer = document.getElementById('container-form');
-    const ResumeContainer = document.getElementById('container-resume');
+    const FormContainer = document.getElementById("container-form");
+    const ResumeContainer = document.getElementById("container-resume");
     FormContainer.style.display = "none";
     ResumeContainer.style.display = "flex";
 }; //generate resume block end
