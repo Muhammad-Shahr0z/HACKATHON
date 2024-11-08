@@ -126,11 +126,20 @@ button:active {
 }
 
 #print-button {
-  padding: 8px 50px;
-  font-size: large;
+  padding: 6px 30px;
+  font-size: 16px;
+  font-weight: 600;
+
 }
 #print-button:hover {
-  background-color: #124c89;
+  background-color: #1369c5;
+}
+
+.edit-button{
+  background-color: #28a745;
+}
+.edit-button:hover{
+  background-color:#189334 !important;
 }
 
 @media (max-width: 768px) {
