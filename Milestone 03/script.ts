@@ -131,7 +131,7 @@ const AddMoreSkills = () => {
 
   let inputOne = document.createElement("input");
   inputOne.classList.add("Skills-class");
-  inputOne.setAttribute("placeholder", "Skill/Expertise (e.g.,HTML,CSS)");
+  inputOne.setAttribute("placeholder", "Skill/Expertise (e.g.,HTML,CSS) Enter a single skill here");
   inputOne.setAttribute("type", "text");
 
   AddMoreSkill.appendChild(inputOne);
