@@ -273,6 +273,9 @@ const GenerateResumeFunction = (e: Event) => {
   ResumeContainer.style.display = "flex";
 }; //generate resume block end
 
+
+
+
 allInputsField.forEach((input: HTMLInputElement) => {
   input.addEventListener("input", checkAllInput);
 });
@@ -284,3 +287,19 @@ GenerateResumeButton.addEventListener("click", GenerateResumeFunction);
 const PrintResume = () => {
   window.print();
 };
+
+
+// edit resume button
+// function
+const Edit = () => {
+  //Hide container-form input fields if genrated resume button clicked
+  const FormContainer: HTMLDivElement = document.getElementById(
+    "container-form"
+  ) as HTMLDivElement;
+  const ResumeContainer: HTMLDivElement = document.getElementById(
+    "container-resume"
+  ) as HTMLDivElement;
+
+  FormContainer.style.display = "flex";
+  ResumeContainer.style.display = "none";
+}
