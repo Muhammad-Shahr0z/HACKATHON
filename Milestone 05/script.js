@@ -164,6 +164,18 @@ const GenerateResumeFunction = (e) => {
     const ResumeContainer = document.getElementById("container-resume");
     FormContainer.style.display = "none";
     ResumeContainer.style.display = "flex";
+    // Sare checkboxes ko select karna jo 'language' name rakhte hain
+    const languageCheckboxes = document.querySelectorAll('input[name="language"]');
+    // let NewList =  [...languageCheckboxes]
+    // Check ki kaunse language check hain
+    let languageUl = document.getElementById('language-ul');
+    languageUl.innerHTML = ''; // List ko clear kar dena pehle
+    languageCheckboxes.forEach((li) => {
+        if (li.checked) {
+            let listItem = `<li class="language">${li.value}</li>`;
+            languageUl.insertAdjacentHTML('beforeend', listItem); // Append the checked items
+        }
+    });
 }; //generate resume block end
 allInputsField.forEach((input) => {
     input.addEventListener("input", checkAllInput);
@@ -172,7 +184,7 @@ GenerateResumeButton.disabled = true;
 GenerateResumeButton.addEventListener("click", GenerateResumeFunction);
 // Print resume Functions
 const PrintResume = () => {
-    document.title = `${firstUserName.innerText.toLowerCase()}/Resume`;
+    document.title = `${window.location.origin}?name=${encodeURIComponent(firstUserName.innerText)}`;
     window.print();
 };
 // edit resume button
