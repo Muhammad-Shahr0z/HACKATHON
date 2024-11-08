@@ -84,7 +84,7 @@
   form .icon {
     width: 30px !important;
     height: 30px !important;
-    background-color: #255ee0!important;
+    background-color: #255ee0 !important;
     display: flex !important;
     margin-right: 15px !important;
     justify-content: center !important;
@@ -140,7 +140,7 @@
     color: rgb(101, 96, 96) !important;
   }
 
-  h1 :first-child{
+  h1 :first-child {
     font-size: 1.8rem !important;
     color: black !important;
     font-weight: 900 !important;
@@ -157,7 +157,7 @@
 
   hr {
     margin-bottom: 3px !important;
-    border: 1px solid #255ee0!important;
+    border: 1px solid #255ee0 !important;
   }
 
   .right-div p {
@@ -218,7 +218,7 @@
     font-size: 1rem !important;
     margin: 10px !important;
     background-color: #007bff;
-    padding:12px 12px !important;
+    padding: 12px 12px !important;
     font-weight: 600;
     border-radius: 5px;
     text-transform: uppercase;
