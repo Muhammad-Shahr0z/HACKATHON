@@ -174,3 +174,12 @@ GenerateResumeButton.addEventListener("click", GenerateResumeFunction);
 const PrintResume = () => {
     window.print();
 };
+// edit resume button
+// function
+const Edit = () => {
+    //Hide container-form input fields if genrated resume button clicked
+    const FormContainer = document.getElementById("container-form");
+    const ResumeContainer = document.getElementById("container-resume");
+    FormContainer.style.display = "flex";
+    ResumeContainer.style.display = "none";
+};
