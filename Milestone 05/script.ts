@@ -12,6 +12,7 @@ inputImage.onchange = () => {
   }
 };
 
+
 let GenerateResumeButton = document.getElementById(
   "genrateBtn"
 ) as HTMLButtonElement;
@@ -271,6 +272,38 @@ const GenerateResumeFunction = (e: Event) => {
 
   FormContainer.style.display = "none";
   ResumeContainer.style.display = "flex";
+
+
+
+
+
+
+
+// Sare checkboxes ko select karna jo 'language' name rakhte hain
+const languageCheckboxes = document.querySelectorAll('input[name="language"]') as NodeListOf<HTMLInputElement>;
+// let NewList =  [...languageCheckboxes]
+
+// Check ki kaunse language check hain
+
+let languageUl = document.getElementById('language-ul') as HTMLUListElement;
+languageUl.innerHTML = ''; // List ko clear kar dena pehle
+
+  languageCheckboxes.forEach((li) => {
+    if (li.checked) {
+      let listItem = `<li class="language">${li.value}</li>`;
+      languageUl.insertAdjacentHTML('beforeend', listItem); // Append the checked items
+    }
+  });
+
+
+
+
+
+  
+
+
+
+
 }; //generate resume block end
 
 
@@ -285,7 +318,7 @@ GenerateResumeButton.addEventListener("click", GenerateResumeFunction);
 
 // Print resume Functions
 const PrintResume = () => {
-  document.title = `${firstUserName.innerText.toLowerCase()}/Resume`
+  document.title =  `${window.location.origin}?name=${encodeURIComponent(firstUserName.innerText)}`;
   window.print();
 };
 
@@ -313,3 +346,6 @@ const Edit = () => {
 const Delete= () => {
   window.location.reload();
 }
+
+
+
