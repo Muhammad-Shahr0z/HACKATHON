@@ -1,5 +1,4 @@
 "use strict";
-// Resume Variables;
 // Profile Picture Handling
 let resumeImage = document.getElementById("resumeImage");
 let inputImage = document.getElementById("inputImage");
@@ -8,6 +7,24 @@ inputImage.onchange = () => {
         resumeImage.src = URL.createObjectURL(inputImage.files[0]);
     }
 };
+let GenerateResumeButton = document.getElementById('genrateBtn');
+const allInputsField = document.querySelectorAll("input[required]");
+const checkAllInput = () => {
+    let IsValid = true;
+    const allFields = document.querySelectorAll("input[required]");
+    allFields.forEach((field) => {
+        if (field.value.trim() === "") {
+            IsValid = false;
+            field.classList.add('error');
+        }
+        else {
+            field.classList.remove('error');
+            // field.classList.add('greenClass')
+        }
+    });
+    GenerateResumeButton.disabled = !IsValid;
+};
+// Resume Variables;
 // COntact information Variable resume
 let firstUserName = document.getElementById("firstUserName");
 let lastUserName = document.getElementById("lastUserName");
@@ -81,8 +98,9 @@ newUlDiv.classList.add("education-div");
 let newUlDiv2 = document.createElement("ul"); //yahan mene new ul create kia hai
 newUlDiv.classList.add("experience-div");
 // Main Function Of GenerateResume
-const GenerateResume = (event) => {
-    event.preventDefault();
+const GenerateResumeFunction = (e) => {
+    e.preventDefault();
+    console.log("running");
     // Veriables Injecting Contact Info ANd UserName ANd Profession
     firstUserName.innerText = inputfName.value;
     lastUserName.innerText = inputlName.value;
@@ -147,6 +165,11 @@ const GenerateResume = (event) => {
     FormContainer.style.display = "none";
     ResumeContainer.style.display = "flex";
 }; //generate resume block end
+allInputsField.forEach((input) => {
+    input.addEventListener("input", checkAllInput);
+});
+GenerateResumeButton.disabled = true;
+GenerateResumeButton.addEventListener("click", GenerateResumeFunction);
 // Print resume Functions
 const PrintResume = () => {
     window.print();
