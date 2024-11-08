@@ -1,149 +1,190 @@
-//buttons & image  VARIABLES
-var downloadbtn = document.getElementById("download-btn");
-var shareBtn = document.getElementById("share-btn");
-var uploadedImage = document.getElementById("uploaded-image");
-var imageContainer = document.getElementById("uploaded-image");
-//// PERSONAL INFORMATION VARIABLES
-var fullName = document.getElementById("fname");
-var emailAddress = document.getElementById("email");
-var mobileNumber = document.getElementById("mobileNumber");
-var fullAddress = document.getElementById("fullAddress");
-// Image Input
-// Function to handle image upload and display
-function handleImageUpload() {
-    var imageInput = document.getElementById("image-input");
-    if (imageInput && uploadedImage) {
-        imageInput.addEventListener("change", function (event) {
-            var input = event.target;
-            if (input.files && input.files[0]) {
-                var file = input.files[0];
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    var _a;
-                    if ((_a = e.target) === null || _a === void 0 ? void 0 : _a.result) {
-                        uploadedImage.src = e.target.result;
-                    }
-                };
-                reader.readAsDataURL(file);
-            }
-        });
+"use strict";
+// Profile Picture Handling
+let resumeImage = document.getElementById("resumeImage");
+let inputImage = document.getElementById("inputImage");
+inputImage.onchange = () => {
+    if (inputImage.files && inputImage.files[0]) {
+        resumeImage.src = URL.createObjectURL(inputImage.files[0]);
     }
-}
-// Initialize the image upload handler
-document.addEventListener("DOMContentLoaded", handleImageUpload);
-//EDUCATION SECTION////
-// Add MORE BUTTON
-var addMoreButton = document.getElementById("addMoreButton");
-// Text Area Access
-var textArea_2 = document.getElementById("educationAreaTwo");
-var textArea_1 = document.getElementById("educationAreaOne");
-//ADD MORE BUTTON
-addMoreButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    if (addMoreButton.innerHTML === "Add More") {
-        addMoreButton.innerHTML = "Remove";
-        textArea_2.style.display = "block";
-    }
-    else {
-        textArea_2.style.display = "none";
-        addMoreButton.innerHTML = "Add More";
-        textArea_2.value = "";
-    }
-});
-//////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////
-// SKILLS SECTION
-// Add MORE BUTTON
-var skillAddMoreButton = document.getElementById("skillAddMoreButton");
-// Text Area Access
-var skillAreaOne = document.getElementById("skillAreaOne");
-var skillAreaTwo = document.getElementById("skillAreaTwo");
-skillAddMoreButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    if (skillAddMoreButton.innerHTML === "Add More") {
-        skillAddMoreButton.innerHTML = "Remove";
-        skillAreaTwo.style.display = "block";
-    }
-    else {
-        skillAreaTwo.style.display = "none";
-        skillAreaTwo.innerText;
-        skillAddMoreButton.innerHTML = "Add More";
-        skillAreaTwo.value = "";
-    }
-});
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-// Work Experience SECTION
-// Add MORE BUTTON
-var workAddMoreButton = document.getElementById("workAddMoreButton");
-// Text Area Access
-var workAreaTwo = document.getElementById("workAreaTwo");
-var workAreaOne = document.getElementById("workAreaOne");
-workAddMoreButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    if (workAddMoreButton.innerHTML === "Add More") {
-        workAddMoreButton.innerHTML = "Remove";
-        workAreaTwo.style.display = "block";
-    }
-    else {
-        workAreaTwo.style.display = "none";
-        workAreaTwo.innerText;
-        workAddMoreButton.innerHTML = "Add More";
-        workAreaTwo.value = "";
-    }
-});
-// GENERATE RESUME SECTION
-var ResumeForm = document.getElementById("resumeForm");
-var showResume = document.getElementById("output");
-var GenerateResume = function (event) {
-    event.preventDefault();
-    //image container visibility
-    imageContainer.style.display = "block";
-    // Variables
-    //personal Information
-    fullName;
-    emailAddress;
-    mobileNumber;
-    fullAddress;
-    //education
-    textArea_1;
-    textArea_2;
-    //Skills
-    skillAreaOne;
-    skillAreaTwo;
-    // Work Experience
-    workAreaOne;
-    workAreaTwo;
-    // This Variable Assign A New Content To My Empty Div  & This Is Generated Resume Section
-    showResume.innerHTML = "<div class=\"container\">\n  \n  <h1 class=\"mainHeading\">".concat(fullName.value, "</h1>\n\n  <!-- Personal Information Section -->\n\n  <section> \n  \n  <h2>Personal Information</h2>\n  <p>\n  <i class=\"fa-regular fa-user infoIcon\"></i>\n  <strong>Full Name :</strong> <span id=\"name\">").concat(fullName.value, "</span>\n  </p>\n  \n  <p>\n  <i class=\"fa-regular fa-envelope infoIcon\"></i>\n  <strong>Email Address :</strong>\n  <span id=\"contact\"> ").concat(emailAddress.value, "</span>\n  </p>\n  \n  <p>\n  <i class=\"fa-solid fa-square-phone-flip infoIcon\"></i>\n  <strong>Mobile Number :</strong><span id=\"contact\">").concat(mobileNumber.value, "</span>\n  </p>\n  \n  <p>\n  <i class=\"fa-regular fa-address-book infoIcon\"></i>\n  <strong>Address :</strong> <span id=\"contact\">").concat(fullAddress.value, "</span>\n  </p>\n  \n  </section>\n  \n  \n  \n  <!-- Education Section -->\n  \n  <section>\n  <i class=\"fa-solid fa-graduation-cap secIcon\"></i>\n  \n  <h2>Education</h2>\n  \n  <pre><i class=\"fa-solid fa-circle-dot\"></i> ").concat(textArea_1.value, "</pre>\n  \n  <pre></i> ").concat(textArea_2.value != "" ? textArea_2.value : "", "</pre>\n  \n  </section>\n  \n  \n  \n  \n  <!-- Skills Section -->\n  \n  <section>\n  <i class=\"fa-solid fa-rocket secIcon\"></i>\n  <h2>Skills</h2>\n  <pre><i class=\"fa-solid fa-circle-dot\"></i> ").concat(skillAreaOne.value, "</pre>\n  <pre></i> ").concat(skillAreaTwo.value != "" ? skillAreaTwo.value : "", "</pre>\n  \n  </section>\n  \n  \n  \n  \n  <!-- Work Experience Section -->\n  \n  <section>\n  <i class=\"fa-solid fa-briefcase secIcon\"></i>\n  <h2>Work Experience</h2>\n  <pre><i class=\"fa-solid fa-circle-dot\"></i> ").concat(workAreaOne.value, "</pre>\n  <pre></i> ").concat(workAreaTwo.value != "" ? workAreaTwo.value : "", "</pre>\n  \n  </section>\n  \n  \n  ");
-    // Hidden Button Visibility Show
-    downloadbtn.style.display = "inline-block";
-    shareBtn.style.display = "inline-block";
 };
-ResumeForm.addEventListener("submit", GenerateResume);
-// Download Resume Button
-downloadbtn.addEventListener("click", function () {
-    window.print();
-});
-// Shareable Link 
-var generateBtn = document.getElementById("genrate-resume-btn");
-shareBtn;
-var usernameInput = document.getElementById("fname");
-var shareableLinkDiv = document.getElementById("shareableLink");
-// Function to generate shareable link
-function generateLink() {
-    var username = usernameInput.value.trim();
-    if (username) {
-        var shareableLink_1 = "".concat(window.location.origin, "/").concat(username, "/resume");
-        shareBtn.style.display = 'inline-block';
-        shareBtn.onclick = function () {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'My Resume',
-                    url: shareableLink_1,
-                });
-            }
-        };
+let GenerateResumeButton = document.getElementById("genrateBtn");
+const allInputsField = document.querySelectorAll("input[required]");
+const checkAllInput = () => {
+    let IsValid = true;
+    const allFields = document.querySelectorAll("input[required]");
+    allFields.forEach((field) => {
+        if (field.value.trim() === "") {
+            IsValid = false;
+            field.classList.add("error");
+        }
+        else {
+            field.classList.remove("error");
+            // field.classList.add('greenClass')
+        }
+    });
+    GenerateResumeButton.disabled = !IsValid;
+};
+// Resume Variables;
+// COntact information Variable resume
+let firstUserName = document.getElementById("firstUserName");
+let lastUserName = document.getElementById("lastUserName");
+let profession = document.getElementById("profession");
+let userPhone = document.getElementById("userPhone");
+let userEmail = document.getElementById("userEmail");
+let userAddress = document.getElementById("userAddress");
+let userID = document.getElementById("userID");
+// INput fieled Variables
+let inputfName = document.getElementById("inputfName");
+let inputlName = document.getElementById("inputlName");
+let inputProfession = document.getElementById("inputProfession");
+let inputNumber = document.getElementById("inputNumber");
+let inputEmail = document.getElementById("inputEmail");
+let inputCnic = document.getElementById("inputCnic");
+let inputAddress = document.getElementById("inputAddress");
+// function to allow only numbers or deshes in CNIC FIELD
+inputCnic.addEventListener("keypress", (event) => {
+    const char = event.key;
+    if (!/[0-9-]/.test(char)) {
+        event.preventDefault();
     }
-}
-generateBtn.addEventListener("click", generateLink);
+});
+// AddMoreEducations Function
+const AddMoreEducations = () => {
+    const AddMoreEdu = document.getElementsByClassName("Education-Section")[0];
+    let WrapperDiv = document.createElement("div");
+    WrapperDiv.classList.add("inputWrape");
+    let inputOne = document.createElement("input");
+    inputOne.classList.add("EducationTitle");
+    inputOne.setAttribute("placeholder", "Field of study (e.g.,Computer Science)");
+    inputOne.setAttribute("type", "text");
+    let inputTwo = document.createElement("input");
+    inputTwo.classList.add("EducationDetail");
+    inputTwo.setAttribute("placeholder", "Degree, institution,and year");
+    inputTwo.setAttribute("type", "text");
+    WrapperDiv.appendChild(inputOne);
+    WrapperDiv.appendChild(inputTwo);
+    AddMoreEdu.appendChild(WrapperDiv);
+};
+// AddMoreExperience Function
+const AddMoreExperience = () => {
+    const AddMoreExp = document.getElementsByClassName("Experience-Section")[0];
+    let WrapperDiv = document.createElement("div");
+    WrapperDiv.classList.add("inputWrape");
+    let inputOne = document.createElement("input");
+    inputOne.classList.add("Experience-title");
+    inputOne.setAttribute("placeholder", "Job Title (e.g., Software Engineer)");
+    inputOne.setAttribute("type", "text");
+    let inputTwo = document.createElement("input");
+    inputTwo.classList.add("Experience-detail");
+    inputTwo.setAttribute("placeholder", "Company, years, key responsibilities");
+    inputTwo.setAttribute("type", "text");
+    WrapperDiv.appendChild(inputOne);
+    WrapperDiv.appendChild(inputTwo);
+    AddMoreExp.appendChild(WrapperDiv);
+};
+// AddMoreSkill Function
+const AddMoreSkills = () => {
+    const AddMoreSkill = document.getElementsByClassName("Skills-Section")[0];
+    let inputOne = document.createElement("input");
+    inputOne.classList.add("Skills-class");
+    inputOne.setAttribute("placeholder", "Skill/Expertise (e.g.,HTML,CSS) Enter a single skill here");
+    inputOne.setAttribute("type", "text");
+    AddMoreSkill.appendChild(inputOne);
+};
+// education Ul create
+let newUlDiv = document.createElement("ul"); //yahan mene new ul create kia hai
+newUlDiv.classList.add("education-div");
+// experience Ul create
+let newUlDiv2 = document.createElement("ul"); //yahan mene new ul create kia hai
+newUlDiv.classList.add("experience-div");
+// Main Function Of GenerateResume
+const GenerateResumeFunction = (e) => {
+    e.preventDefault();
+    console.log("running");
+    // Veriables Injecting Contact Info ANd UserName ANd Profession
+    firstUserName.innerText = inputfName.value;
+    lastUserName.innerText = inputlName.value;
+    profession.innerText = inputProfession.value;
+    userPhone.innerText = inputNumber.value;
+    userEmail.innerText = inputEmail.value;
+    userID.innerText = inputCnic.value;
+    console.log(inputCnic.value);
+    userAddress.innerText = inputAddress.value;
+    const educationsTitle = document.getElementsByClassName("EducationTitle");
+    const educationsDetail = document.getElementsByClassName("EducationDetail");
+    let TitleArray = [...educationsTitle];
+    let DetailArray = [...educationsDetail];
+    const listItems = TitleArray.map((title, index) => {
+        const detail = DetailArray[index] ? DetailArray[index].value : "";
+        return `
+      <li class="title">${title.value}</li>
+      <li class="detail">${detail}</li>
+    `;
+    }).join("");
+    if (newUlDiv) {
+        newUlDiv.innerHTML = listItems;
+    }
+    let educationContainer = document.getElementById("education-container");
+    educationContainer.appendChild(newUlDiv);
+    // experience
+    const jobTitle = document.getElementsByClassName("Experience-title");
+    const jobDetail = document.getElementsByClassName("Experience-detail");
+    let jobTitleArray = [...jobTitle];
+    let jobDetailArray = [...jobDetail];
+    const listItemsjob = jobTitleArray
+        .map((title, index) => {
+        const detail = jobDetailArray[index] ? jobDetailArray[index].value : "";
+        return `
+      <li class="title">${title.value}</li>
+      <li class="detail">${detail}</li>
+    `;
+    })
+        .join("");
+    if (newUlDiv2) {
+        newUlDiv2.innerHTML = listItemsjob;
+    }
+    let experiencecontainer = document.getElementById("experience-container");
+    experiencecontainer.appendChild(newUlDiv2);
+    // SKILLS SECTION
+    const skills = document.getElementsByClassName("Skills-class");
+    let skillsArray = [...skills];
+    const skillsLoop = skillsArray
+        .map((title, index) => {
+        return `
+      <li>${title.value}</li>
+    `;
+    })
+        .join("");
+    let skillsContainer = document.getElementById("skills-container");
+    if (skillsContainer) {
+        skillsContainer.innerHTML = skillsLoop;
+    }
+    //Hide container-form input fields if genrated resume button clicked
+    const FormContainer = document.getElementById("container-form");
+    const ResumeContainer = document.getElementById("container-resume");
+    FormContainer.style.display = "none";
+    ResumeContainer.style.display = "flex";
+}; //generate resume block end
+allInputsField.forEach((input) => {
+    input.addEventListener("input", checkAllInput);
+});
+GenerateResumeButton.disabled = true;
+GenerateResumeButton.addEventListener("click", GenerateResumeFunction);
+// Print resume Functions
+const PrintResume = () => {
+    window.print();
+};
+// edit resume button
+// function
+const Edit = () => {
+    //Hide container-form input fields if genrated resume button clicked
+    const FormContainer = document.getElementById("container-form");
+    const ResumeContainer = document.getElementById("container-resume");
+    FormContainer.style.display = "flex";
+    ResumeContainer.style.display = "none";
+};
+// delet resume button
+// function
+const Delete = () => {
+    window.location.reload();
+};
