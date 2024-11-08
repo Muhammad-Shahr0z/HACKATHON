@@ -68,6 +68,8 @@ li {
   list-style: inside;
 }
 
+
+
 @media (max-width: 768px) {
   .resume-container {
     height: fit-content;

@@ -26,7 +26,7 @@
       <div class="left-div">
         <!-- Porfile Picutre Div 01 -->
         <div class="profile-pic-div">
-          <img class="image" src="/shahrozpic.jpg" alt="Profile Picture" />
+          <img class="image" src="/250.jpg" alt="Profile Picture" id="resumeImage" />
         </div>
 
         <!-- Contact Information Div 02 -->
@@ -146,6 +146,13 @@
 
       <label for="">Last Name</label>
       <input type="text" id="inputlName" placeholder="Enter Your Last Name" />
+
+      <label for="">Profile Picture <span class="size">(Size:250x250 image/*)</span></label>
+      <input type="file" accept="image/*" id="inputImage"/>
+
+      <div class="profile-pic-div" style="display: none;" id="showImageDiv">
+        <img class="image" src="/250.jpg" alt="Profile Picture" id="resumeImageShows" />
+      </div>
 
       <label for="">Profession</label>
       <input

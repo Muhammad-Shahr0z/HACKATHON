@@ -1,5 +1,26 @@
 // Resume Variables;
 
+
+// Profile Picture Handling
+let resumeImage: HTMLImageElement = document.getElementById("resumeImage") as HTMLImageElement;
+let resumeImageShows: HTMLImageElement = document.getElementById("resumeImageShows") as HTMLImageElement;
+let inputImage: HTMLInputElement = document.getElementById("inputImage") as HTMLInputElement;
+
+
+inputImage.onchange = () => {
+let showImageDiv:HTMLDivElement = document.getElementById('showImageDiv') as HTMLDivElement
+showImageDiv.style.display = "block"
+      if (inputImage.files && inputImage.files[0]) {
+        resumeImage.src = URL.createObjectURL(inputImage.files[0]);
+        resumeImageShows.src = URL.createObjectURL(inputImage.files[0]);
+      }
+
+};
+
+
+
+
+
 // COntact information Variable resume
 let firstUserName: HTMLElement = document.getElementById(
   "firstUserName"
@@ -20,6 +41,8 @@ let userAddress: HTMLElement = document.getElementById(
   "userAddress"
 ) as HTMLElement;
 let userID: HTMLElement = document.getElementById("userID") as HTMLElement;
+
+
 
 // INput fieled Variables
 let inputfName: HTMLInputElement = document.getElementById(
@@ -43,6 +66,13 @@ let inputCnic: HTMLInputElement = document.getElementById(
 let inputAddress: HTMLInputElement = document.getElementById(
   "inputAddress"
 ) as HTMLInputElement;
+
+
+
+
+
+
+
 
 // function to allow only numbers or deshes in CNIC FIELD
 inputCnic.addEventListener("keypress", (event) => {

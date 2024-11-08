@@ -130,6 +130,15 @@
   cursor: pointer;
 }
 
+.size{
+  color: rgb(159, 134, 134);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 0;
+}
+
+
 @media (max-width: 794px) {
   .form-container {
     width: 100vw;
