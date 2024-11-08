@@ -285,6 +285,7 @@ GenerateResumeButton.addEventListener("click", GenerateResumeFunction);
 
 // Print resume Functions
 const PrintResume = () => {
+  document.title = `${firstUserName.innerText.toLowerCase()}/Resume`
   window.print();
 };
 
