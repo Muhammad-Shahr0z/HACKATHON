@@ -2,14 +2,10 @@
 // Resume Variables;
 // Profile Picture Handling
 let resumeImage = document.getElementById("resumeImage");
-let resumeImageShows = document.getElementById("resumeImageShows");
 let inputImage = document.getElementById("inputImage");
 inputImage.onchange = () => {
-    let showImageDiv = document.getElementById('showImageDiv');
-    showImageDiv.style.display = "block";
     if (inputImage.files && inputImage.files[0]) {
         resumeImage.src = URL.createObjectURL(inputImage.files[0]);
-        resumeImageShows.src = URL.createObjectURL(inputImage.files[0]);
     }
 };
 // COntact information Variable resume
