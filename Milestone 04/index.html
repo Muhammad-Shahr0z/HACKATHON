@@ -1,152 +1,312 @@
+<!-- /* In the name of Allah, the Most Gracious, the Most Merciful */ -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder - By Muhammad Shahroz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="leftside.css" />
+    <link rel="stylesheet" href="rightside.css" />
+    <link rel="stylesheet" href="form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="print.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume - By Muhammad Shahroz</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- FONT AWESOME  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+  <body>
+    <!-- Main Container Of Resume Builder Templete body chiled 01  -->
+    <div class="resume-container" id="container-resume">
+      <!-- left side div RESUME BUILDER CHILED 01  -->
+      <div class="left-div">
+        <!-- Porfile Picutre Div 01 -->
+        <div class="profile-pic-div">
+          <img
+            class="image"
+            src="/250.jpg"
+            alt="Profile Picture"
+            id="resumeImage"
+          />
+        </div>
 
-<body>
+        <!-- Contact Information Div 02 -->
 
+        <div class="contact-info-div">
+          <h2>contact info</h2>
 
-  <form id="resumeForm">
+          <form class="resume-form">
+            <p>
+              <span class="icon"><i class="fa-solid fa-phone"></i></span
+              ><span id="userPhone">phone number</span>
+            </p>
+            <p>
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span
+              ><span id="userEmail">email address</span>
+            </p>
+            <p>
+              <span class="icon"><i class="fa-solid fa-location-dot"></i></span
+              ><span id="userAddress">full address</span>
+            </p>
+            <p>
+              <span class="icon"><i class="fa-solid fa-id-card"></i></span
+              ><span id="userID">national id card no</span>
+            </p>
+          </form>
+        </div>
 
-    <div class="main-container" id="container">
+        <div class="skills-div">
+          <h2>SKILLS</h2>
+
+          <ul class="skills-sec" id="skills-container">
+            <!-- <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>CSS</li> -->
+          </ul>
+        </div>
+
+        <!-- left side div ENDED  -->
+      </div>
+
+      <!-- right side div RESUME BUILDER CHILED 02 -->
+      <div class="right-div">
+        <!-- Full Name Section`      -->
+        <div class="full-name">
+          <hr />
+          <hr />
+          <hr />
+          <hr style="margin-bottom: 25px" />
+          <h6 id="profession">profession</h6>
+          <h1>
+            <span id="firstUserName">first name</span
+            ><span id="lastUserName">last name</span>
+          </h1>
+          <p>
+            A highly dedicated and passionate professional with a steadfast
+            commitment to personal and professional growth, consistently
+            striving for excellence in every endeavor and focused on delivering
+            exceptional results.
+          </p>
+          <hr class="border" />
+          <hr style="border: 2px solid black" />
+        </div>
+
+        <!-- Education Section -->
+
+        <h2>
+          <i class="fa-solid fa-school" style="color: black"></i>EDUCATIONS
+        </h2>
+
+        <div id="education-container">
+          <!-- <ul class="education-div">
+    <li class="education-detail">XYZ School, Karachi, Pakistan Completed: 2012</li>
+  </ul> -->
+        </div>
+
+        <!-- Experience Section -->
+
+        <h2><i class="fa-solid fa-briefcase"></i>WORK EXPERIENCE</h2>
+        <div id="experience-container">
+          <ul class="experience-div">
+            <!-- <li class="job-title">Data Entry & ERP Operator</li>
+        <li class="job-detail">Skilled in data entry and ERP Experience: 2 Years At J Dot</li> -->
+          </ul>
+        </div>
+
+        <hr />
+
+        <div id="language-div">
+          <h2>
+            <i class="fa-solid fa-language"></i>
+            LANGUAGES
+          </h2>
+
+          <ul class="language-div">
+            <li class="language">URDU</li>
+            <li class="language">ENGLISH</li>
+          </ul>
+        </div>
+
+        <button id="print-button" onclick="PrintResume()">Print</button>
+        <hr />
+
+        <!-- right side div ENDED  -->
+      </div>
+    </div>
+
+    <!-- Main Container Of Resume Builder Form Area body chiled 02 -->
+    <form class="form-container" id="container-form">
       <h1>Resume Builder</h1>
-      <p class="topPeragraph">Designed and developed by <b>Muhammad Shahroz</b></p>
-      <ul>
-        <a href="https://www.facebook.com/muhammad.shahroz.58/" target="_blank"><i
-            class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.linkedin.com/in/muhammad-shahroz-a35b68292/" target="_blank"><i
-            class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/Muhammad-Shahr0z"><i class="fa-brands fa-github" target="_blank"></i></a>
+      <p class="topPeragraph">
+        Designed and developed by <b>Muhammad Shahroz</b>
+      </p>
+
+      <ul class="links">
+        <a href="https://www.facebook.com/muhammad.shahroz.58/" target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/muhammad-shahroz-a35b68292/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Muhammad-Shahr0z"
+          ><i class="fa-brands fa-github" target="_blank"></i
+        ></a>
       </ul>
 
+      <label for="">First Name</label>
+      <input
+        type="text"
+        id="inputfName"
+        placeholder="Enter Your First Name"
+        required
+      />
 
+      <label for="">Last Name</label>
+      <input
+        type="text"
+        id="inputlName"
+        placeholder="Enter Your Last Name"
+        required
+      />
 
+      <label for=""
+        >Profile Picture <span class="size">(Size:250x250 image/*)</span></label
+      >
+      <input type="file" accept="image/*" id="inputImage" required />
 
+      <label for="">Profession</label>
+      <input
+        type="text"
+        id="inputProfession"
+        placeholder="Enter Your Profession"
+        required
+      />
 
-      <!--01 Personal Information Section -->
-      <section id="personal-information" style="display: flex;">
+      <label for="">Mobile Number</label>
+      <input
+        type="number"
+        id="inputNumber"
+        placeholder="Enter Your Mobile Number"
+        required
+      />
 
-        <h2>Personal Information</h2>
-        <!--01 Full Name -->
+      <label for="">Email Address</label>
+      <input
+        type="email"
+        id="inputEmail"
+        placeholder="Enter Your Email Address"
+        required
+      />
 
-        <strong>Full Name:</strong>
-        <input id="fname" type="text" class="fullName" placeholder="Enter Your Full Name" required>
+      <label for="">CNIC Number</label>
+      <input
+        type="text"
+        id="inputCnic"
+        placeholder="Enter CNIC"
+        pattern="[0-9\-]+"
+        title="Only numbers and dashes are allowed"
+        inputmode="numeric"
+        required
+      />
 
+      <label for="">Full Address</label>
+      <input
+        type="text"
+        id="inputAddress"
+        placeholder="Enter Your Full Address"
+        required
+      />
 
-        <!--02 Email Adress -->
+      <!-- Educations SECTION -->
+      <label for="">Educations</label>
+      <div class="Education-Section">
+        <div class="inputWrape">
+          <input
+            type="text"
+            class="EducationTitle"
+            placeholder="Field of study (e.g.,Computer Science)"
+            required
+          />
 
-        <strong>Email Address:</strong>
-        <input id="email" type="email" class="emailAdress" placeholder="Enter Your Email Address " required>
+          <input
+            type="text"
+            class="EducationDetail"
+            placeholder="Degree, institution,and year"
+            required
+          />
+        </div>
+      </div>
 
-        <!--03 Mobile Number  -->
+      <button type="button" class="addMoreButton" onclick="AddMoreEducations()">
+        Add More
+      </button>
 
-        <strong>Mobile Number:</strong>
-        <input id="mobileNumber" type="number" class="mobileNumber" placeholder="Enter Your Mobile Number" required>
+      <!-- Experience SECTION -->
+      <label for="">Experience</label>
+      <div class="Experience-Section">
+        <div class="inputWrape">
+          <input
+            type="text"
+            class="Experience-title"
+            placeholder="Job Title (e.g., Software Engineer)"
+            required
+          />
+          <input
+            type="text"
+            class="Experience-detail"
+            placeholder="Company, years, key responsibilities"
+            required
+          />
+        </div>
+      </div>
 
-        <!--04 Full Address -->
+      <button type="button" class="addMoreButton" onclick="AddMoreExperience()">
+        Add More
+      </button>
 
-        <strong>Full Address:</strong>
-        <input id="fullAddress" type="text" class="fullAdress" placeholder="Enter Your Full Address" required>
+      <!-- Skills SECTION -->
+      <label for="">Skills</label>
 
-      </section>
+      <div class="Skills-Section">
+        <input
+          type="text"
+          class="Skills-class"
+          placeholder="Skill/Expertise (e.g.,HTML,CSS) Enter a single skill here"
+          required
+        />
+      </div>
 
+      <button type="button" class="addMoreButton" onclick="AddMoreSkills()">
+        Add More
+      </button>
 
-      <section id="image-section">
-        <!-- Input for selecting an image -->
-        <input type="file" id="image-input" accept="image/*">
-      </section>
+      <!-- Languages Section -->
 
-      <!--02 Education Section -->
+      <label>Languages</label>
+      <div class="checkbox-lang">
+        <label>
+          <input type="checkbox" name="language" value="English" /> English
+        </label>
+        <label>
+          <input type="checkbox" name="language" value="Urdu" /> Urdu
+        </label>
+      </div>
 
-      <section id="education-information">
+      <button type="submit" id="genrateBtn" class="genrateButton">
+        Generate Resume
+      </button>
+    </form>
 
-        <h2>Education</h2>
-        <textarea id="educationAreaOne" required></textarea>
-        <textarea id="educationAreaTwo"></textarea>
-        <button id="addMoreButton">Add More</button>
-
-      </section>
-
-
-      <!--03 Skills Section -->
-
-
-      <section id="Skills">
-
-
-        <h2>Skills</h2>
-
-        <textarea id="skillAreaOne" required></textarea>
-        <textarea id="skillAreaTwo"></textarea>
-        <button id="skillAddMoreButton">Add More</button>
-
-      </section>
-
-
-
-
-      <!--04 Work Experience  Section -->
-
-
-      <section id="work-experience">
-
-
-        <h2>Work Experience</h2>
-
-        <textarea id="workAreaOne" required></textarea>
-        <textarea id="workAreaTwo"></textarea>
-
-
-        <button id="workAddMoreButton">Add More</button>
-
-      </section>
-      <button type="submit" id="genrate-resume-btn">Generate Resume</button>
-
-
-  </form>
-
-  <div class="image-container">
-
-    <img id="uploaded-image" src="/profilePic.png" alt="Uploaded Image" style="display: none;">
-  </div>
-
-
-
-  <section id="output">
-  </section>
-
-
-
-
-  <!--Extra commented For Milestone 03 -->
-  <!--     
-    <section>
-      <button  id="download-btn" style="display: none;"><i class="fa-solid fa-print"></i>PRINT</button>
-      <button  id="share-btn" style="display: none;"><i class="fa-solid fa-share"></i>SHARE</button>
-    </section>
-     -->
-
-  </div>
-
-
-
-  <!-- Link to the JavaScript file -->
-
-
-
-  <script src="script.js"></script>
-
-
-
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

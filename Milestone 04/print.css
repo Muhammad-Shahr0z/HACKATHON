@@ -1,0 +1,227 @@
+@media print {
+  @page {
+    size: A4;
+    margin: 0px 0px;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    max-width: 794px !important;
+    max-height: 1123px !important;
+    overflow-x: hidden;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .resume-container * {
+    visibility: visible;
+  }
+
+  #print-button {
+    display: none;
+  }
+  #hide-lang-button {
+    display: none;
+  }
+
+  .resume-container {
+    max-width: 792px !important;
+    max-height: 1121px !important;
+    margin: 0 !important;
+    page-break-inside: avoid;
+  }
+
+  .left-div {
+    height: 1123px !important;
+    width: 40% !important;
+    background-color: #121d2e !important;
+  }
+
+  .profile-pic-div {
+    width: 250px !important;
+    height: 250px !important;
+    overflow: hidden !important;
+    border-radius: 50% !important;
+    border: 3px solid white !important;
+    margin: auto !important;
+    padding: 5px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    caret-color: transparent !important;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+  }
+
+  img {
+    width: 99% !important;
+    height: auto !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+  }
+
+  .contact-info-div h2 {
+    width: 100% !important;
+    padding: 10px !important;
+    text-align: center !important;
+    background-color: #3f454d !important;
+    letter-spacing: 2px !important;
+  }
+
+  .contact-info-div form {
+    margin: 40px auto !important;
+    display: flex !important;
+    height: 200px !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: start !important;
+    padding-left: 10px !important;
+  }
+
+  form .icon {
+    width: 30px !important;
+    height: 30px !important;
+    background-color: #255ee0 !important;
+    display: flex !important;
+    margin-right: 15px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 50% !important;
+  }
+
+  form p {
+    display: flex !important;
+    justify-content: start !important;
+    align-items: center !important;
+    font-size: 1rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  form p i {
+    color: black !important;
+  }
+
+  .skills-div {
+    width: 100% !important;
+    height: 450px !important;
+  }
+
+  .skills-div h2 {
+    width: 100% !important;
+    padding: 10px !important;
+    text-align: center !important;
+    background-color: #3f454d !important;
+    margin-bottom: 40px !important;
+  }
+
+  .right-div {
+    height: 1123px !important;
+    width: 60% !important;
+    padding: 40px 20px !important;
+  }
+
+  .right-div h2 {
+    margin: 40px 0px !important;
+    font-size: 1.4rem !important;
+  }
+
+  h2 i {
+    margin-right: 10px !important;
+    color: black !important;
+  }
+
+  h6 {
+    margin-top: 20px !important;
+    color: black !important;
+    font-size: 1.1rem !important;
+    color: rgb(101, 96, 96) !important;
+  }
+
+  h1 :first-child {
+    font-size: 1.8rem !important;
+    color: black !important;
+    font-weight: 900 !important;
+    letter-spacing: 1px !important;
+    margin-right: 8px;
+  }
+
+  h1 span {
+    font-size: 1.8rem !important;
+    color: #255ee0 !important;
+    font-weight: 900 !important;
+    letter-spacing: 1px !important;
+  }
+
+  hr {
+    margin-bottom: 3px !important;
+    border: 1px solid #255ee0 !important;
+  }
+
+  .right-div p {
+    color: rgb(101, 96, 96) !important;
+    font-size: 0.8rem !important;
+    font-weight: bold !important;
+  }
+
+  .border {
+    margin-top: 25px !important;
+    border: 5px solid #255ee0 !important;
+  }
+
+  .education-div {
+    margin-bottom: 30px !important;
+  }
+
+  .education-title {
+    color: black !important;
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+  }
+
+  .education-detail {
+    color: rgb(65, 60, 60) !important;
+    font-size: 0.9rem !important;
+    margin-top: 5px !important;
+  }
+
+  .experience-div {
+    margin-bottom: 30px !important;
+  }
+
+  .job-title {
+    color: black !important;
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+  }
+
+  .job-detail {
+    color: rgb(65, 60, 60) !important;
+    font-size: 0.9rem !important;
+    margin-top: 5px !important;
+  }
+
+  .language-div {
+    margin-bottom: 40px !important;
+  }
+
+  .language {
+    color: black !important;
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  .skills-sec li {
+    font-size: 1rem !important;
+    margin: 10px !important;
+    background-color: #007bff;
+    padding: 12px 12px !important;
+    font-weight: 600;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px !important;
+  }
+}

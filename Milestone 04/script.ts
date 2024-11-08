@@ -1,317 +1,286 @@
-//PERSONAL INFORMATION VARIABLES  
+// Profile Picture Handling
+let resumeImage: HTMLImageElement = document.getElementById(
+  "resumeImage"
+) as HTMLImageElement;
+let inputImage: HTMLInputElement = document.getElementById(
+  "inputImage"
+) as HTMLInputElement;
 
-const downloadbtn: HTMLButtonElement = document.getElementById('download-btn') as HTMLButtonElement
-const shareBtn: HTMLButtonElement = document.getElementById('share-btn') as HTMLButtonElement
-const uploadedImage = document.getElementById('uploaded-image') as HTMLImageElement;
-const imageContainer = document.getElementById('uploaded-image') as HTMLDivElement;
-
-
-// Image Input 
-// Function to handle image upload and display
-function handleImageUpload(): void {
-  const imageInput = document.getElementById('image-input') as HTMLInputElement;
-
-  if (imageInput && uploadedImage) {
-      imageInput.addEventListener('change', (event: Event) => {
-          const input = event.target as HTMLInputElement;
-          if (input.files && input.files[0]) {
-              const file = input.files[0];
-              const reader = new FileReader();
-
-              reader.onload = (e: ProgressEvent<FileReader>) => {
-                  if (e.target?.result) {
-                      uploadedImage.src = e.target.result as string;
-                  }
-              };
-
-              reader.readAsDataURL(file);
-          }
-      });
+inputImage.onchange = () => {
+  if (inputImage.files && inputImage.files[0]) {
+    resumeImage.src = URL.createObjectURL(inputImage.files[0]);
   }
-  
-}
+};
 
-// Initialize the image upload handler
-document.addEventListener('DOMContentLoaded', handleImageUpload);
-
-
-//// PERSONAL INFORMATION VARIABLES 
-
-const fullName: HTMLInputElement = document.getElementById(
-  "fname"
-) as HTMLInputElement;
-const emailAddress: HTMLInputElement = document.getElementById(
-  "email"
-) as HTMLInputElement;
-const mobileNumber: HTMLInputElement = document.getElementById(
-  "mobileNumber"
-) as HTMLInputElement;
-const fullAddress: HTMLInputElement = document.getElementById(
-  "fullAddress"
-) as HTMLInputElement;
-
-
-//EDUCATION SECTION////
-// Add MORE BUTTON
-
-const addMoreButton: HTMLButtonElement = document.getElementById(
-  "addMoreButton"
+let GenerateResumeButton = document.getElementById(
+  "genrateBtn"
 ) as HTMLButtonElement;
+const allInputsField = document.querySelectorAll(
+  "input[required]"
+) as NodeListOf<HTMLInputElement>;
 
-// Text Area Access
+const checkAllInput = () => {
+  let IsValid: boolean = true;
+  const allFields = document.querySelectorAll(
+    "input[required]"
+  ) as NodeListOf<HTMLInputElement>;
 
-const textArea_2: HTMLTextAreaElement = document.getElementById(
-  "educationAreaTwo"
-) as HTMLTextAreaElement;
-const textArea_1: HTMLTextAreaElement = document.getElementById(
-  "educationAreaOne"
-) as HTMLTextAreaElement;
+  allFields.forEach((field) => {
+    if (field.value.trim() === "") {
+      IsValid = false;
+      field.classList.add("error");
+    } else {
+      field.classList.remove("error");
+      // field.classList.add('greenClass')
+    }
+  });
+  GenerateResumeButton.disabled = !IsValid;
+};
 
-//ADD MORE BUTTON
+// Resume Variables;
+// COntact information Variable resume
+let firstUserName: HTMLElement = document.getElementById(
+  "firstUserName"
+) as HTMLElement;
+let lastUserName: HTMLElement = document.getElementById(
+  "lastUserName"
+) as HTMLElement;
+let profession: HTMLElement = document.getElementById(
+  "profession"
+) as HTMLElement;
+let userPhone: HTMLElement = document.getElementById(
+  "userPhone"
+) as HTMLElement;
+let userEmail: HTMLElement = document.getElementById(
+  "userEmail"
+) as HTMLElement;
+let userAddress: HTMLElement = document.getElementById(
+  "userAddress"
+) as HTMLElement;
+let userID: HTMLElement = document.getElementById("userID") as HTMLElement;
 
-addMoreButton.addEventListener("click", (event) => {
-  event.preventDefault();
+// INput fieled Variables
+let inputfName: HTMLInputElement = document.getElementById(
+  "inputfName"
+) as HTMLInputElement;
+let inputlName: HTMLInputElement = document.getElementById(
+  "inputlName"
+) as HTMLInputElement;
+let inputProfession: HTMLInputElement = document.getElementById(
+  "inputProfession"
+) as HTMLInputElement;
+let inputNumber: HTMLInputElement = document.getElementById(
+  "inputNumber"
+) as HTMLInputElement;
+let inputEmail: HTMLInputElement = document.getElementById(
+  "inputEmail"
+) as HTMLInputElement;
+let inputCnic: HTMLInputElement = document.getElementById(
+  "inputCnic"
+) as HTMLInputElement;
+let inputAddress: HTMLInputElement = document.getElementById(
+  "inputAddress"
+) as HTMLInputElement;
 
-  if (addMoreButton.innerHTML === "Add More") {
-    addMoreButton.innerHTML = "Remove";
-
-    textArea_2.style.display = "block";
-  } else {
-    textArea_2.style.display = "none";
-    addMoreButton.innerHTML = "Add More";
-    textArea_2.value = "";
+// function to allow only numbers or deshes in CNIC FIELD
+inputCnic.addEventListener("keypress", (event) => {
+  const char = event.key;
+  if (!/[0-9-]/.test(char)) {
+    event.preventDefault();
   }
 });
 
-//////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////
+// AddMoreEducations Function
+const AddMoreEducations = () => {
+  const AddMoreEdu = document.getElementsByClassName("Education-Section")[0];
 
-// SKILLS SECTION
-// Add MORE BUTTON
-const skillAddMoreButton: HTMLButtonElement = document.getElementById(
-  "skillAddMoreButton"
-) as HTMLButtonElement;
+  let WrapperDiv = document.createElement("div");
+  WrapperDiv.classList.add("inputWrape");
 
-// Text Area Access
-const skillAreaOne: HTMLTextAreaElement = document.getElementById(
-  "skillAreaOne"
-) as HTMLTextAreaElement;
-const skillAreaTwo: HTMLTextAreaElement = document.getElementById(
-  "skillAreaTwo"
-) as HTMLTextAreaElement;
+  let inputOne = document.createElement("input");
+  inputOne.classList.add("EducationTitle");
 
+  inputOne.setAttribute(
+    "placeholder",
+    "Field of study (e.g.,Computer Science)"
+  );
+  inputOne.setAttribute("type", "text");
 
-skillAddMoreButton.addEventListener("click", (event) => {
-  event.preventDefault();
+  let inputTwo = document.createElement("input");
+  inputTwo.classList.add("EducationDetail");
+  inputTwo.setAttribute("placeholder", "Degree, institution,and year");
+  inputTwo.setAttribute("type", "text");
 
-  if (skillAddMoreButton.innerHTML === "Add More") {
-    skillAddMoreButton.innerHTML = "Remove";
-    skillAreaTwo.style.display = "block";
-  } else {
-    skillAreaTwo.style.display = "none";
-    skillAreaTwo.innerText;
-    skillAddMoreButton.innerHTML = "Add More";
-    skillAreaTwo.value = "";
+  WrapperDiv.appendChild(inputOne);
+  WrapperDiv.appendChild(inputTwo);
+  AddMoreEdu.appendChild(WrapperDiv);
+};
+
+// AddMoreExperience Function
+const AddMoreExperience = () => {
+  const AddMoreExp = document.getElementsByClassName("Experience-Section")[0];
+
+  let WrapperDiv = document.createElement("div");
+  WrapperDiv.classList.add("inputWrape");
+
+  let inputOne = document.createElement("input");
+  inputOne.classList.add("Experience-title");
+  inputOne.setAttribute("placeholder", "Job Title (e.g., Software Engineer)");
+  inputOne.setAttribute("type", "text");
+
+  let inputTwo = document.createElement("input");
+  inputTwo.classList.add("Experience-detail");
+  inputTwo.setAttribute("placeholder", "Company, years, key responsibilities");
+  inputTwo.setAttribute("type", "text");
+
+  WrapperDiv.appendChild(inputOne);
+  WrapperDiv.appendChild(inputTwo);
+  AddMoreExp.appendChild(WrapperDiv);
+};
+
+// AddMoreSkill Function
+const AddMoreSkills = () => {
+  const AddMoreSkill = document.getElementsByClassName("Skills-Section")[0];
+
+  let inputOne = document.createElement("input");
+  inputOne.classList.add("Skills-class");
+  inputOne.setAttribute(
+    "placeholder",
+    "Skill/Expertise (e.g.,HTML,CSS) Enter a single skill here"
+  );
+  inputOne.setAttribute("type", "text");
+
+  AddMoreSkill.appendChild(inputOne);
+};
+
+// education Ul create
+let newUlDiv: HTMLUListElement = document.createElement("ul"); //yahan mene new ul create kia hai
+newUlDiv.classList.add("education-div");
+
+// experience Ul create
+let newUlDiv2: HTMLUListElement = document.createElement("ul"); //yahan mene new ul create kia hai
+newUlDiv.classList.add("experience-div");
+
+// Main Function Of GenerateResume
+const GenerateResumeFunction = (e: Event) => {
+  e.preventDefault();
+
+  console.log("running");
+
+  // Veriables Injecting Contact Info ANd UserName ANd Profession
+  firstUserName.innerText = inputfName.value;
+  lastUserName.innerText = inputlName.value;
+  profession.innerText = inputProfession.value;
+  userPhone.innerText = inputNumber.value;
+  userEmail.innerText = inputEmail.value;
+  userID.innerText = inputCnic.value;
+
+  console.log(inputCnic.value);
+
+  userAddress.innerText = inputAddress.value;
+
+  const educationsTitle = document.getElementsByClassName(
+    "EducationTitle"
+  ) as HTMLCollectionOf<HTMLInputElement>;
+  const educationsDetail = document.getElementsByClassName(
+    "EducationDetail"
+  ) as HTMLCollectionOf<HTMLInputElement>;
+
+  let TitleArray: any = [...educationsTitle];
+  let DetailArray: any = [...educationsDetail];
+
+  const listItems = TitleArray.map((title: any, index: number) => {
+    const detail = DetailArray[index] ? DetailArray[index].value : "";
+
+    return `
+      <li class="title">${title.value}</li>
+      <li class="detail">${detail}</li>
+    `;
+  }).join("");
+
+  if (newUlDiv) {
+    newUlDiv.innerHTML = listItems;
   }
+
+  let educationContainer: HTMLDivElement = document.getElementById(
+    "education-container"
+  ) as HTMLDivElement;
+  educationContainer.appendChild(newUlDiv);
+
+  // experience
+
+  const jobTitle = document.getElementsByClassName(
+    "Experience-title"
+  ) as HTMLCollectionOf<HTMLInputElement>;
+  const jobDetail = document.getElementsByClassName(
+    "Experience-detail"
+  ) as HTMLCollectionOf<HTMLInputElement>;
+
+  let jobTitleArray: any = [...jobTitle];
+  let jobDetailArray: any = [...jobDetail];
+
+  const listItemsjob = jobTitleArray
+    .map((title: any, index: number) => {
+      const detail = jobDetailArray[index] ? jobDetailArray[index].value : "";
+
+      return `
+      <li class="title">${title.value}</li>
+      <li class="detail">${detail}</li>
+    `;
+    })
+    .join("");
+
+  if (newUlDiv2) {
+    newUlDiv2.innerHTML = listItemsjob;
+  }
+
+  let experiencecontainer: HTMLDivElement = document.getElementById(
+    "experience-container"
+  ) as HTMLDivElement;
+  experiencecontainer.appendChild(newUlDiv2);
+
+  // SKILLS SECTION
+
+  const skills = document.getElementsByClassName(
+    "Skills-class"
+  ) as HTMLCollectionOf<HTMLInputElement>;
+
+  let skillsArray: any = [...skills];
+
+  const skillsLoop = skillsArray
+    .map((title: any, index: number) => {
+      return `
+      <li>${title.value}</li>
+    `;
+    })
+    .join("");
+
+  let skillsContainer = document.getElementById("skills-container");
+
+  if (skillsContainer) {
+    skillsContainer.innerHTML = skillsLoop;
+  }
+
+  //Hide container-form input fields if genrated resume button clicked
+  const FormContainer: HTMLDivElement = document.getElementById(
+    "container-form"
+  ) as HTMLDivElement;
+  const ResumeContainer: HTMLDivElement = document.getElementById(
+    "container-resume"
+  ) as HTMLDivElement;
+
+  FormContainer.style.display = "none";
+  ResumeContainer.style.display = "flex";
+}; //generate resume block end
+
+allInputsField.forEach((input: HTMLInputElement) => {
+  input.addEventListener("input", checkAllInput);
 });
 
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
+GenerateResumeButton.disabled = true;
+GenerateResumeButton.addEventListener("click", GenerateResumeFunction);
 
-// Work Experience SECTION
-// Add MORE BUTTON
-const workAddMoreButton: HTMLButtonElement = document.getElementById(
-  "workAddMoreButton"
-) as HTMLButtonElement;
-// Text Area Access
-const workAreaTwo: HTMLTextAreaElement = document.getElementById(
-  "workAreaTwo"
-) as HTMLTextAreaElement;
-const workAreaOne: HTMLTextAreaElement = document.getElementById(
-  "workAreaOne"
-) as HTMLTextAreaElement;
-
-
-workAddMoreButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  
-  if (workAddMoreButton.innerHTML === "Add More") {
-    workAddMoreButton.innerHTML = "Remove";
-    workAreaTwo.style.display = "block";
-  } else {
-    workAreaTwo.style.display = "none";
-    workAreaTwo.innerText;
-    workAddMoreButton.innerHTML = "Add More";
-    workAreaTwo.value = "";
-  }
-});
-
-// GENERATE RESUME SECTION
-const ResumeForm: HTMLElement = document.getElementById(
-  "resumeForm"
-) as HTMLFormElement;
-
-const showResume = document.getElementById("output") as HTMLDivElement;
-
-const GenerateResume = (event: Event): void => {
-  event.preventDefault();
-  //image container visibility
-
-  imageContainer.style.display = "block"
-
-  // Variables
-
-  //personal Information
-
-  fullName;
-  emailAddress;
-  mobileNumber;
-  fullAddress;
-
-  //education
-  textArea_1;
-  textArea_2;
-
-  //Skills
-  skillAreaOne;
-  skillAreaTwo;
-
-  // Work Experience
-  workAreaOne;
-  workAreaTwo;
-
-  
-// This Variable Assign A New Content To My Empty Div  & This Is Generated Resume Section
-
-  showResume.innerHTML =`<div class="container">
-  
-  <h1 class="mainHeading">${fullName.value}</h1>
-
-  <!-- Personal Information Section -->
-
-  <section> 
-  
-  <h2>Personal Information</h2>
-  <p>
-  <i class="fa-regular fa-user infoIcon"></i>
-  <strong>Full Name :</strong> <span id="name">${fullName.value}</span>
-  </p>
-  
-  <p>
-  <i class="fa-regular fa-envelope infoIcon"></i>
-  <strong>Email Address :</strong>
-  <span id="contact"> ${emailAddress.value}</span>
-  </p>
-  
-  <p>
-  <i class="fa-solid fa-square-phone-flip infoIcon"></i>
-  <strong>Mobile Number :</strong><span id="contact">${mobileNumber.value}</span>
-  </p>
-  
-  <p>
-  <i class="fa-regular fa-address-book infoIcon"></i>
-  <strong>Address :</strong> <span id="contact">${fullAddress.value}</span>
-  </p>
-  
-  </section>
-  
-  
-  
-  <!-- Education Section -->
-  
-  <section>
-  <i class="fa-solid fa-graduation-cap secIcon"></i>
-  
-  <h2>Education</h2>
-  
-  <pre><i class="fa-solid fa-circle-dot"></i> ${textArea_1.value}</pre>
-  
-  <pre></i> ${textArea_2.value != "" ? textArea_2.value : ""}</pre>
-  
-  </section>
-  
-  
-  
-  
-  <!-- Skills Section -->
-  
-  <section>
-  <i class="fa-solid fa-rocket secIcon"></i>
-  <h2>Skills</h2>
-  <pre><i class="fa-solid fa-circle-dot"></i> ${skillAreaOne.value}</pre>
-  <pre></i> ${skillAreaTwo.value != "" ? skillAreaTwo.value : ""}</pre>
-  
-  </section>
-  
-  
-  
-  
-  <!-- Work Experience Section -->
-  
-  <section>
-  <i class="fa-solid fa-briefcase secIcon"></i>
-  <h2>Work Experience</h2>
-  <pre><i class="fa-solid fa-circle-dot"></i> ${workAreaOne.value}</pre>
-  <pre></i> ${workAreaTwo.value != "" ? workAreaTwo.value : ""}</pre>
-  
-  </section>
-  
-  
-  `;
-
-// Hidden Button Visibility Show
-
-  downloadbtn.style.display = 'inline-block'
-  shareBtn.style.display = 'inline-block'
- 
-}
-
-
-ResumeForm.addEventListener("submit", GenerateResume);
-
-
-
-
-
-// Unlock In Next Milestone
-
-// Download Resume Button 
-
-// --Reason commented For Milestone 03   This Feature Use to Next Milestone
-
-
-// downloadbtn.addEventListener('click', () => {
-
-//   window.print()
-// })
-
-
-// Share Resume Button 
-
-// shareBtn.addEventListener('click', () => {
-//   // Get the content of the desired div
-//   const outputDiv = document.getElementById('output') as HTMLElement;
-
-//   if (outputDiv) {
-//       const content = outputDiv.innerText || outputDiv.textContent; // Get text content of the div
-
-//       if (navigator.share) {
-//           // Use the Web Share API
-//           navigator.share({
-//               title: 'Content to Share',
-//               text: content || 'No content to share', // Default text if content is empty
-//               url: window.location.href  // Optional: Include the page URL
-//           })
-//           .then(() => {
-//               console.log('Content shared successfully');
-//           })
-//           .catch(error => {
-//               console.error('Error sharing content:', error);
-//           });
-//       } else {
-//           alert('Web Share API is not supported in this browser.');
-//       }
-//   }
-// });
-
-
+// Print resume Functions
+const PrintResume = () => {
+  window.print();
+};
