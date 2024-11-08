@@ -1,6 +1,10 @@
 // Profile Picture Handling
-let resumeImage: HTMLImageElement = document.getElementById("resumeImage") as HTMLImageElement;
-let inputImage: HTMLInputElement = document.getElementById("inputImage") as HTMLInputElement;
+let resumeImage: HTMLImageElement = document.getElementById(
+  "resumeImage"
+) as HTMLImageElement;
+let inputImage: HTMLInputElement = document.getElementById(
+  "inputImage"
+) as HTMLInputElement;
 
 inputImage.onchange = () => {
   if (inputImage.files && inputImage.files[0]) {
@@ -8,39 +12,30 @@ inputImage.onchange = () => {
   }
 };
 
-
-let GenerateResumeButton = document.getElementById('genrateBtn') as HTMLButtonElement;
-const allInputsField = document.querySelectorAll("input[required]") as NodeListOf<HTMLInputElement>;
-
-
-
+let GenerateResumeButton = document.getElementById(
+  "genrateBtn"
+) as HTMLButtonElement;
+const allInputsField = document.querySelectorAll(
+  "input[required]"
+) as NodeListOf<HTMLInputElement>;
 
 const checkAllInput = () => {
+  let IsValid: boolean = true;
+  const allFields = document.querySelectorAll(
+    "input[required]"
+  ) as NodeListOf<HTMLInputElement>;
 
-let IsValid:boolean = true;
-  const allFields = document.querySelectorAll("input[required]") as NodeListOf<HTMLInputElement>;
-
-  allFields.forEach((field)=> {
-
-    if(field.value.trim() === ""){
+  allFields.forEach((field) => {
+    if (field.value.trim() === "") {
       IsValid = false;
-      field.classList.add('error')
-    }else{
-      field.classList.remove('error')
+      field.classList.add("error");
+    } else {
+      field.classList.remove("error");
       // field.classList.add('greenClass')
-
     }
-  }) 
-  GenerateResumeButton.disabled = !IsValid
+  });
+  GenerateResumeButton.disabled = !IsValid;
 };
-
-
-
-
-
-
-
-
 
 // Resume Variables;
 // COntact information Variable resume
@@ -64,8 +59,6 @@ let userAddress: HTMLElement = document.getElementById(
 ) as HTMLElement;
 let userID: HTMLElement = document.getElementById("userID") as HTMLElement;
 
-
-
 // INput fieled Variables
 let inputfName: HTMLInputElement = document.getElementById(
   "inputfName"
@@ -88,13 +81,6 @@ let inputCnic: HTMLInputElement = document.getElementById(
 let inputAddress: HTMLInputElement = document.getElementById(
   "inputAddress"
 ) as HTMLInputElement;
-
-
-
-
-
-
-
 
 // function to allow only numbers or deshes in CNIC FIELD
 inputCnic.addEventListener("keypress", (event) => {
@@ -158,13 +144,14 @@ const AddMoreSkills = () => {
 
   let inputOne = document.createElement("input");
   inputOne.classList.add("Skills-class");
-  inputOne.setAttribute("placeholder", "Skill/Expertise (e.g.,HTML,CSS) Enter a single skill here");
+  inputOne.setAttribute(
+    "placeholder",
+    "Skill/Expertise (e.g.,HTML,CSS) Enter a single skill here"
+  );
   inputOne.setAttribute("type", "text");
 
   AddMoreSkill.appendChild(inputOne);
 };
-
-
 
 // education Ul create
 let newUlDiv: HTMLUListElement = document.createElement("ul"); //yahan mene new ul create kia hai
@@ -174,13 +161,11 @@ newUlDiv.classList.add("education-div");
 let newUlDiv2: HTMLUListElement = document.createElement("ul"); //yahan mene new ul create kia hai
 newUlDiv.classList.add("experience-div");
 
-
 // Main Function Of GenerateResume
-const GenerateResumeFunction = (e:Event) => {
- e.preventDefault()
+const GenerateResumeFunction = (e: Event) => {
+  e.preventDefault();
 
-console.log("running");
-
+  console.log("running");
 
   // Veriables Injecting Contact Info ANd UserName ANd Profession
   firstUserName.innerText = inputfName.value;
@@ -276,31 +261,24 @@ console.log("running");
     skillsContainer.innerHTML = skillsLoop;
   }
 
+  //Hide container-form input fields if genrated resume button clicked
+  const FormContainer: HTMLDivElement = document.getElementById(
+    "container-form"
+  ) as HTMLDivElement;
+  const ResumeContainer: HTMLDivElement = document.getElementById(
+    "container-resume"
+  ) as HTMLDivElement;
 
-//Hide container-form input fields if genrated resume button clicked
-const FormContainer:HTMLDivElement = document.getElementById('container-form')as HTMLDivElement
-const ResumeContainer:HTMLDivElement = document.getElementById('container-resume')as HTMLDivElement;
-
-FormContainer.style.display = "none"
-ResumeContainer.style.display="flex"
-
- 
-
-
+  FormContainer.style.display = "none";
+  ResumeContainer.style.display = "flex";
 }; //generate resume block end
 
+allInputsField.forEach((input: HTMLInputElement) => {
+  input.addEventListener("input", checkAllInput);
+});
 
-
-
-allInputsField.forEach((input:HTMLInputElement)=>{
-  input.addEventListener("input",checkAllInput)
-})
-
-
-
-GenerateResumeButton.disabled = true
-GenerateResumeButton.addEventListener("click",GenerateResumeFunction)
-
+GenerateResumeButton.disabled = true;
+GenerateResumeButton.addEventListener("click", GenerateResumeFunction);
 
 // Print resume Functions
 const PrintResume = () => {
