@@ -3,6 +3,7 @@
     size: A4;
     margin: 0px 0px;
   }
+
   body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
@@ -83,7 +84,7 @@
   form .icon {
     width: 30px !important;
     height: 30px !important;
-    background-color: rgb(255, 136, 0) !important;
+    background-color: #255ee0!important;
     display: flex !important;
     margin-right: 15px !important;
     justify-content: center !important;
@@ -116,33 +117,6 @@
     margin-bottom: 40px !important;
   }
 
-  .skills-bar {
-    padding: 5px 10px !important;
-  }
-
-  .skills-percentage {
-    display: flex !important;
-    justify-content: space-between !important;
-    padding: 0px 4px !important;
-    margin-bottom: 5px !important;
-    font-size: 0.8rem !important;
-  }
-
-  .outer-bar {
-    background-color: #3f454d !important;
-    width: 100% !important;
-    padding: 3px 0px !important;
-    border-top-right-radius: 5px !important;
-    border-bottom-right-radius: 5px !important;
-  }
-
-  .inner-bar {
-    height: 15px !important;
-    background-color: rgb(255, 136, 0) !important;
-    border-top-right-radius: 5px !important;
-    border-bottom-right-radius: 5px !important;
-  }
-
   .right-div {
     height: 1123px !important;
     width: 60% !important;
@@ -167,7 +141,7 @@
   }
 
   h1 :first-child{
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
     color: black !important;
     font-weight: 900 !important;
     letter-spacing: 1px !important;
@@ -175,15 +149,15 @@
   }
 
   h1 span {
-    font-size: 2rem !important;
-    color: rgb(255, 136, 0) !important;
+    font-size: 1.8rem !important;
+    color: #255ee0 !important;
     font-weight: 900 !important;
     letter-spacing: 1px !important;
   }
 
   hr {
     margin-bottom: 3px !important;
-    border: 1px solid rgb(255, 136, 0) !important;
+    border: 1px solid #255ee0!important;
   }
 
   .right-div p {
@@ -194,7 +168,7 @@
 
   .border {
     margin-top: 25px !important;
-    border: 5px solid rgb(255, 136, 0) !important;
+    border: 5px solid #255ee0 !important;
   }
 
   .education-div {

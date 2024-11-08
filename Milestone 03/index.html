@@ -1,298 +1,268 @@
+<!-- /* In the name of Allah, the Most Gracious, the Most Merciful */ -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder - By Muhammad Shahroz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="leftside.css" />
+    <link rel="stylesheet" href="rightside.css" />
+    <link rel="stylesheet" href="form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="print.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume Builder - By Muhammad Shahroz</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="leftside.css" />
-  <link rel="stylesheet" href="rightside.css" />
-  <link rel="stylesheet" href="form.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="print.css">
-</head>
+  <body>
+    <!-- Main Container Of Resume Builder Templete body chiled 01  -->
+    <div class="resume-container" id="container-resume">
+      <!-- left side div RESUME BUILDER CHILED 01  -->
+      <div class="left-div">
+        <!-- Porfile Picutre Div 01 -->
+        <div class="profile-pic-div">
+          <img class="image" src="/shahrozpic.jpg" alt="Profile Picture" />
+        </div>
 
-<body>
+        <!-- Contact Information Div 02 -->
 
+        <div class="contact-info-div">
+          <h2>contact info</h2>
 
-  <!-- Main Container Of Resume Builder Templete  -->
+          <form class="resume-form">
+            <p>
+              <span class="icon"><i class="fa-solid fa-phone"></i></span
+              ><span id="userPhone">phone number</span>
+            </p>
+            <p>
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span
+              ><span id="userEmail">email address</span>
+            </p>
+            <p>
+              <span class="icon"><i class="fa-solid fa-location-dot"></i></span
+              ><span id="userAddress">full address</span>
+            </p>
+            <p>
+              <span class="icon"><i class="fa-solid fa-id-card"></i></span
+              ><span id="userID">national id card no</span>
+            </p>
+          </form>
+        </div>
 
-<div class="resume-container" style="display: none;">
+        <div class="skills-div">
+          <h2>SKILLS</h2>
 
+          <ul class="skills-sec" id="skills-container">
+            <!-- <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>CSS</li> -->
+          </ul>
+        </div>
 
-
-    <!-- left side div  -->
-    <div class="left-div">
-
-
-
-
-
-      <!-- Porfile Picutre Div 01 -->
-      <div class="profile-pic-div">
-        <img class="image" src="/shahrozpic.jpg" alt="Profile Picture">
+        <!-- left side div ENDED  -->
       </div>
 
-
-
-
-
-
-      <!-- Contact Information Div 02 -->
-
-      <div class="contact-info-div">
-
-        <h2>contact info</h2>
-
-        <form class="resume-form">
-          <p><span class="icon"><i class="fa-solid fa-phone"></i></span><span id="userPhone">phone number</span></p>
-          <p><span class="icon"><i class="fa-solid fa-envelope"></i></span><span id="userEmail">email address</span></p>
-          <p><span class="icon"><i class="fa-solid fa-location-dot"></i></span><span id="userAddress">full
-              address</span></p>
-          <p><span class="icon"><i class="fa-solid fa-id-card"></i></span><span id="userID">national id card no</span>
+      <!-- right side div RESUME BUILDER CHILED 02 -->
+      <div class="right-div">
+        <!-- Full Name Section`      -->
+        <div class="full-name">
+          <hr />
+          <hr />
+          <hr />
+          <hr style="margin-bottom: 25px" />
+          <h6 id="profession">profession</h6>
+          <h1>
+            <span id="firstUserName">first name</span
+            ><span id="lastUserName">last name</span>
+          </h1>
+          <p>
+            A highly dedicated and passionate professional with a steadfast
+            commitment to personal and professional growth, consistently
+            striving for excellence in every endeavor and focused on delivering
+            exceptional results.
           </p>
-        </form>
+          <hr class="border" />
+          <hr style="border: 2px solid black" />
+        </div>
 
+        <!-- Education Section -->
+
+        <h2>
+          <i class="fa-solid fa-school" style="color: black"></i>EDUCATIONS
+        </h2>
+
+        <div id="education-container">
+          <!-- <ul class="education-div">
+    <li class="education-detail">XYZ School, Karachi, Pakistan Completed: 2012</li>
+  </ul> -->
+        </div>
+
+        <!-- Experience Section -->
+
+        <h2><i class="fa-solid fa-briefcase"></i>WORK EXPERIENCE</h2>
+        <div id="experience-container">
+          <ul class="experience-div">
+            <!-- <li class="job-title">Data Entry & ERP Operator</li>
+        <li class="job-detail">Skilled in data entry and ERP Experience: 2 Years At J Dot</li> -->
+          </ul>
+        </div>
+
+        <hr />
+
+        <div id="language-div">
+          <h2>
+            <i class="fa-solid fa-language"></i>
+            LANGUAGES
+          </h2>
+
+          <ul class="language-div">
+            <li class="language">URDU</li>
+            <li class="language">ENGLISH</li>
+          </ul>
+        </div>
+
+        <button id="print-button" onclick="PrintResume()">Print</button>
+        <hr />
+
+        <!-- right side div ENDED  -->
       </div>
+    </div>
 
+    <!-- Main Container Of Resume Builder Form Area body chiled 02 -->
+    <form class="form-container" id="container-form">
+      <h1>Generate Your Resume</h1>
 
+      <label for="">First Name</label>
+      <input type="text" id="inputfName" placeholder="Enter Your First Name" />
 
-      <div class="skills-div">
+      <label for="">Last Name</label>
+      <input type="text" id="inputlName" placeholder="Enter Your Last Name" />
 
-        <h2>SKILLS</h2>
-        <div class="skills-bar" id="skills">
+      <label for="">Profession</label>
+      <input
+        type="text"
+        id="inputProfession"
+        placeholder="Enter Your Profession"
+      />
 
-          <div class="skills-percentage">
-            <div>HTML</div>
-            <div>90%</div>
-          </div>
+      <label for="">Mobile Number</label>
+      <input
+        type="number"
+        id="inputNumber"
+        placeholder="Enter Your Mobile Number"
+      />
 
-          <div class="outer-bar">
-            <div class="inner-bar" style="width: 20%"></div>
-          </div>
+      <label for="">Email Address</label>
+      <input
+        type="email"
+        id="inputEmail"
+        placeholder="Enter Your Email Address"
+      />
 
-          <div class="skills-percentage">
-            <div>HTML</div>
-            <div>90%</div>
-          </div>
+      <label for="">CNIC Number</label>
+      <input
+        type="text"
+        id="inputCnic"
+        placeholder="Enter CNIC"
+        pattern="[0-9\-]+"
+        title="Only numbers and dashes are allowed"
+        inputmode="numeric"
+      />
 
-          <div class="outer-bar">
-            <div class="inner-bar" style="width: 20%"></div>
-          </div>
+      <label for="">Full Address</label>
+      <input
+        type="text"
+        id="inputAddress"
+        placeholder="Enter Your Full Address"
+      />
 
-          <div class="skills-percentage">
-            <div>HTML</div>
-            <div>90%</div>
-          </div>
-
-          <div class="outer-bar">
-            <div class="inner-bar" style="width: 20%"></div>
-          </div>
-
-
+      <!-- Educations SECTION -->
+      <label for="">Educations</label>
+      <div class="Education-Section">
+        <div class="inputWrape">
+          <input
+            type="text"
+            class="EducationTitle"
+            placeholder="Field of study (e.g.,Computer Science)"
+          />
+          <input
+            type="text"
+            class="EducationDetail"
+            placeholder="Degree, institution,and year"
+          />
         </div>
       </div>
 
-      <!-- left side div ENDED  -->
-    </div>
-    <!-- right side div  -->
-    <div class="right-div">
+      <button type="button" class="addMoreButton" onclick="AddMoreEducations()">
+        Add More
+      </button>
 
-
-
-      <!-- Full Name Section`      -->
-      <div class="full-name">
-        <hr>
-        <hr>
-        <hr>
-        <hr style="margin-bottom: 25px;">
-        <h6 id="profession">profession</h6>
-        <h1><span id="firstUserName">first name</span><span id="lastUserName">last name</span></h1>
-        <p>A dedicated professional committed to growth and excellence.</p>
-        <hr class="border">
-        <hr style="border: 2px solid black;">
+      <!-- Experience SECTION -->
+      <label for="">Experience</label>
+      <div class="Experience-Section">
+        <div class="inputWrape">
+          <input
+            type="text"
+            class="Experience-title"
+            placeholder="Job Title (e.g., Software Engineer)"
+          />
+          <input
+            type="text"
+            class="Experience-detail"
+            placeholder="Company, years, key responsibilities"
+          />
+        </div>
       </div>
 
+      <button type="button" class="addMoreButton" onclick="AddMoreExperience()">
+        Add More
+      </button>
 
+      <!-- Skills SECTION -->
+      <label for="">Skills</label>
 
-      <!-- Education Section -->
-
-      <h2><i class="fa-solid fa-school" style="color: black;"></i>EDUCATIONS</h2>
-      <ul class="education-div">
-        <li class="education-title">Matriculation in Science (Biology)</li>
-        <li class="education-detail">XYZ School, Karachi, Pakistan
-          Completed: 2012</li>
-      </ul>
-
-
-
-
-
-
-      <!-- Experience Section -->
-
-      <h2><i class="fa-solid fa-briefcase"></i>WORK EXPERIENCE</h2>
-
-      <ul class="experience-div">
-        <li class="job-title">Data Entry & ERP Operator</li>
-        <li class="job-detail">Skilled in data entry and ERP Experience: 2 Years At J Dot</li>
-      </ul>
-
-
-      </ul>
-
-      <hr>
-
-
-      <div id="language-div">
-        <h2><i class="fa-solid fa-language"></i></i>LANGUAGES
-        </h2>
-
-        <ul class="language-div">
-          <li class="language">URDU</li>
-
-        </ul>
+      <div class="Skills-Section">
+        <input
+          type="text"
+          class="Skills-class"
+          placeholder="Skill/Expertise (e.g.,HTML,CSS)"
+        />
       </div>
 
-      <button id="print-button" onclick="PrintResume()">Print</button>
-      <hr>
-
-
-      <!-- right side div ENDED  -->
-    </div>
-
-</div>
-
-
-
-
-
-
-
- 
-<!-- Main Container Of Resume Builder Form Area -->
-
-
-<form class="form-container">
-  <h1>Generate Your Resume</h1>
-
-
-<label for="">First Name</label>
-<input type="text" id="inputfName" placeholder="Enter Your First Name">
-
-<label for="">Last Name</label>
-<input type="text" id="inputlName" placeholder="Enter Your Last Name">
-
-<label for="">Profession</label>
-<input type="text" id="inputProfession" placeholder="Enter Your Profession">
-
-<label for="">Mobile Number</label>
-<input type="number" id="inputNumber" placeholder="Enter Your Mobile Number">
-
-<label for="">Email Address</label>
-<input type="email" id="inputEmail" placeholder="Enter Your Email Address">
-
-<label for="">CNIC Number</label>
-<input type="number"id="inputCnic" placeholder="Enter Your CNIC Number">
-
-<label for="">Full Address</label>
-<input type="text" id="inputAddress" placeholder="Enter Your Full Address">
-
-
-
-
-<!-- Education SECTION -->
-<label for="">Educations</label>
-<div class="Education-Section">
-
-<div class="inputWrape">
-  <input type="text"class="Education-class"placeholder="Field of study (e.g.,Computer Science)">
-  <input type="text"class="Education-class"placeholder="Degree, institution,and year">
-</div>
-
-</div>
-
-<button type="button" class="addMoreButton" onclick="AddMoreEducations()">Add More</button>
-
-
-
-
-
-<!-- Experience SECTION -->
-<label for="">Experience</label>
-<div class="Experience-Section">
-
-  <div class="inputWrape">
-    <input type="text"class="Experience-class"placeholder="Job Title (e.g., Software Engineer)">
-    <input type="text"class="Experience-class"placeholder="Company, years, key responsibilities">
-  </div>
-
-</div>
-
-<button type="button" class="addMoreButton" onclick="AddMoreExperience()">Add More</button>
-
-
-
-
-<!-- Skills SECTION -->
-<label for="">Skills</label>
-
-<div class="Skills-Section">
-  <div class="inputWrape">
-    <input type="text"class="Skills-class"placeholder="Skill/Expertise (e.g.,HTML,CSS)">
-    <input class="Skills-class"type="number" placeholder="Skill Level (%) 0 to 100 ?" min="0" max="100" oninput="this.value = Math.min(this.value, 100)">
-  </div>
-</div>
-
-<button type="button" class="addMoreButton" onclick="AddMoreSkills()">Add More</button>
-
-
-
-
-
-
-
-
-<button type="submit" class="genrateButton" onclick="GenerateResume(event)">Generate Resume</button>
-
-
-</form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <button type="button" class="addMoreButton" onclick="AddMoreSkills()">
+        Add More
+      </button>
+
+      <!-- Languages Section -->
+
+      <label>Languages</label>
+      <div class="checkbox-lang">
+        <label>
+          <input type="checkbox" name="language" value="English" /> English
+        </label>
+        <label>
+          <input type="checkbox" name="language" value="Urdu" /> Urdu
+        </label>
+      </div>
+
+      <button
+        type="submit"
+        class="genrateButton"
+        onclick="GenerateResume(event)"
+      >
+        Generate Resume
+      </button>
+    </form>
 
     <script src="script.js"></script>
-
-</body>
-
-
-
-
-
+  </body>
 </html>

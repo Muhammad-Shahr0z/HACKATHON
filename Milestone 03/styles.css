@@ -10,39 +10,36 @@
   caret-color: transparent;
 }
 
-
-input{
-  caret-color: rgb(255, 136, 0);
+input {
+  caret-color: #007bff;
 }
 
-::selection{
-   color:rgb(255, 136, 0);
+::selection {
+  color: #007bff;
 }
 
-
- body {
- max-width:100%;
- max-height:100% ;
-  margin: 0;
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
- background-color: white !important;
+  background-color: white !important;
 }
 
 body::-webkit-scrollbar {
-  width: 5px; 
+  width: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color:rgb(255, 136, 0); 
-  border-radius: 5px; 
+  background-color: #007bff;
+  border-radius: 5px;
 }
 
-
-
 /* Main Container Of Resume Builder  */
-.resume-container{
+.resume-container {
   width: 794px;
   height: 1123px;
   box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.234);
@@ -50,32 +47,29 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-h2{
-  color: rgb(255, 136, 0);
+#container-resume{
+  display: none;
+}
+
+h2 {
+  color: #007bff;
   font-weight: 800;
   font-size: 1.2rem;
   letter-spacing: 2px;
 }
-h1{
+h1 {
   color: black;
 }
-h1 span{
+h1 span {
   color: black;
 }
 
-
-li{
+li {
   list-style: inside;
-
 }
 
-@media (max-width:768px) {
-  .resume-container{
-   height:fit-content;
+@media (max-width: 768px) {
+  .resume-container {
+    height: fit-content;
   }
 }
-
-
-
-
-
