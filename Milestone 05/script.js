@@ -201,3 +201,18 @@ const Edit = () => {
 const Delete = () => {
     window.location.reload();
 };
+// shareable link handling
+const shareable = () => {
+    if (navigator.share) {
+        navigator.share({
+            title: `${firstUserName.innerText} Resume`,
+            text: `Hey ${firstUserName.innerText} here is your shareable link`,
+            url: `${window.location.href}/${firstUserName.innerText}/resume`
+        })
+            .then(() => console.log("Shared successfully!"))
+            .catch((error) => console.error("Error sharing:", error));
+    }
+    else {
+        alert("Sharing not supported on this browser.");
+    }
+};
