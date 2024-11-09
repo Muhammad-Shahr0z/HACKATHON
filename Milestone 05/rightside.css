@@ -126,7 +126,7 @@ button:active {
 }
 
 #print-button{
-  width: 100px;
+  width: 90px;
   font-size: 16px;
   font-weight: 600;
 
@@ -136,7 +136,7 @@ button:active {
 }
 
 #edit-button{
-  width: 100px;
+  width: 90px;
   font-size: 16px;
   font-weight: 600;
   background-color: #28a745;
@@ -146,15 +146,25 @@ button:active {
 }
 
 
+#share-button{
+  width: 90px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #fd7e14;
+}
+
+#share-button:hover{
+background-color:#d96201;
+}
 #delete-button{
-  width: 100px;
+  width: 90px;
   font-size: 16px;
   font-weight: 600;
   background-color: red;
 }
 
 #delete-button:hover{
-background-color:rgb(113, 9, 9);
+background-color:rgb(150, 5, 5);
 }
 
 
