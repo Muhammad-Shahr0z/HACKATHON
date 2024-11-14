@@ -77,24 +77,21 @@
   cursor: pointer;
 }
 .addMoreButton:hover {
-  margin-bottom: 20px;
   background-color: #255ee0;
 }
 
-.Education-Section input {
-  width: 49%;
+
+
+
+.removeBtn{
+  margin: 0px 0px 10px 0px !important;
+  background-color: red;
+}
+.removeBtn:hover{
+
+  background-color: rgb(168, 3, 3);
 }
 
-.Experience-Section input {
-  width: 49%;
-}
-
-.inputWrape {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 #profession {
   text-transform: capitalize;
