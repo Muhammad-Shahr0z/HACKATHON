@@ -2,12 +2,14 @@
 
 body {
     background: linear-gradient(135deg, #cceeff, #f3e6ff);
+    display: block;
+
 }
 
   
   .container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -39,6 +41,12 @@ body {
         font-size: 1rem;
         width: fit-content !important;
         padding: 15px 10px !important;
+    }
+
+
+    .headerclass{
+  
+        background-color: transparent !important;
     }
 
 
