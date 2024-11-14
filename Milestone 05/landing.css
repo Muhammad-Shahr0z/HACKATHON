@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    caret-color: transparent;
+}
+
+
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
+    background: linear-gradient(135deg, #cceeff, #f3e6ff);
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
+
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    box-shadow:  1px 1px 1px rgba(0, 0, 0, 0.242);
+}
+
+header h6{
+ color: white;
+ font-size: 1.2rem;
+ letter-spacing: 2px;
+ font-family: "Pacifico", cursive;
+ font-weight: 400;
+ font-style: normal;
+ color:black;
+ 
+}
+
+.logo{
+    height: fit-content;
+    width: fit-content;
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.logo p{
+ font-size: .6rem;
+ text-align: end;
+ font-weight:600 !important;
+ padding-top: 2px;
+ caret-color: transparent;
+ color: rgb(170, 158, 158);
+ letter-spacing: 1px;
+}
+
+.btn-about-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    font-size: 1.2rem;
+}
+.btn-about-div .about{
+  margin: 0px 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: .9rem;
+  cursor: pointer;
+  padding: 4px 10px;
+  transition:color 500ms ease-in;
+  border: 2px solid #13378c;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #255ee0;
+
+}
+.btn-about-div .about:hover{
+background-color: #255ee0;
+color: white;
+
+
+}
+
+.btn-about-div .resume-btn{
+text-decoration: none;
+color: white;
+text-transform: uppercase;
+font-size: 1rem;
+letter-spacing: 1px;
+font-weight: 700;
+background-color: #255ee0;
+padding: 5px 10px;
+border-radius: 5px;
+
+}
+.btn-about-div .resume-btn:hover{
+background-color: #13378c;
+
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 70px);
+    padding: 30px 80px;
+    overflow: hidden;
+}
+
+
+.leftdiv{
+  min-width: 50%;
+   height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.leftdiv h1{
+font-size: 3.1rem;
+margin-bottom: 20px;
+text-transform: capitalize;
+}
+
+.leftdiv .resume-left {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    background-color: #255ee0;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+.leftdiv .resume-left:hover {
+    background-color: #13378c;
+}
+
+.leftdiv .about-left{
+    margin: 0px 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: .9rem;
+    cursor: pointer;
+    padding: 2px 15px;
+    transition:color 500ms ease-in;
+    border: 2px solid #13378c;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #255ee0;
+}
+
+
+
+
+/* :right div */
+
+
+img{
+  
+min-width: 50%;
+rotate: -10deg;
+scale: 1.1;
+   
+}
+
+
+
+
+@media (max-width:1024px) {
+
+    .leftdiv{
+     min-width: 50%;
+
+      }
+
+    img{
+  
+        width: 50%;
+        rotate: -10deg;
+        scale: 1.1;
+           
+    }
+
+        header h6{
+    
+          display: none;
+
+        
+           }
+
+
+           .btn-about-div .resume-btn{
+            width: 90px;
+            font-size: .7rem;
+            font-weight: 400;
+            padding: 4px 5px;
+    
+            
+            }
+
+            .btn-about-div .about{
+                text-align: center;
+                width: 82px;
+                margin: 0px 5px;
+                font-weight: 400;
+                font-size: .7rem;
+                padding: 2px 5px;
+              
+              }
+              .logo{
+                height: fit-content;
+                width: fit-content;
+                font-weight: 700;
+                font-size: .9rem;
+                padding: 5px 10px;
+                border-radius: 3px;
+                text-decoration: none;
+                color: black;
+                text-transform: uppercase;
+            }
+            .logo p{
+             font-size: .5rem;
+             text-align: end;
+             font-weight:400 !important;
+             padding-top: 2px;
+             caret-color: transparent;
+             color: rgb(170, 158, 158);
+             letter-spacing: 1px;
+            }
+
+            main{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column-reverse;
+                width: 100%;
+                height: calc(100vh - 70px);
+                padding: 0px 10px 0px 30px;
+                overflow: auto;
+         
+            }
+
+
+        
+img{
+  
+    min-width: 85%;
+    rotate: 0deg;
+    scale: 1.1;
+       
+    }
+
+    .leftdiv{
+        min-width: 100%;
+         height: calc(100vh - 70px);
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+      }
+
+      .leftdiv h1{
+        font-size: 5rem;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        
+        }
+        .leftdiv .resume-left {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            background-color: #255ee0;
+            padding: 7px 15px;
+            border-radius: 5px;
+    
+        }
+
+        
+
+}
+
+
+@media (max-width:640px) {
+    main{
+       
+        justify-content: start;
+        width: 100%;
+        height: calc(100vh - 70px);
+        padding: 0px 0px 0px 10px;
+        overflow: hidden;
+ 
+    }
+
+    .leftdiv h1{
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        
+        
+        }
+
+        .leftdiv{
+         
+             height: fit-content;
+    
+          }
+
+          .leftdiv .resume-left {
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            background-color: #255ee0;
+            padding: 7px 15px;
+            border-radius: 5px;
+    
+        }
+
+}
