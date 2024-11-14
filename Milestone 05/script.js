@@ -52,7 +52,7 @@ inputCnic.addEventListener("keypress", (event) => {
 const AddMoreEducations = () => {
     const AddMoreEdu = document.getElementsByClassName("Education-Section")[0];
     let WrapperDiv = document.createElement("div");
-    WrapperDiv.classList.add("inputWrape");
+    WrapperDiv.classList.add("inputWrapes");
     let inputOne = document.createElement("input");
     inputOne.classList.add("EducationTitle");
     inputOne.setAttribute("placeholder", "Field of study (e.g.,Computer Science)");
@@ -61,8 +61,16 @@ const AddMoreEducations = () => {
     inputTwo.classList.add("EducationDetail");
     inputTwo.setAttribute("placeholder", "Degree, institution,and year");
     inputTwo.setAttribute("type", "text");
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "Remove";
+    removeButton.classList.add('removeBtn');
+    removeButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        WrapperDiv.remove();
+    });
     WrapperDiv.appendChild(inputOne);
     WrapperDiv.appendChild(inputTwo);
+    WrapperDiv.appendChild(removeButton);
     AddMoreEdu.appendChild(WrapperDiv);
 };
 // AddMoreExperience Function
@@ -78,18 +86,37 @@ const AddMoreExperience = () => {
     inputTwo.classList.add("Experience-detail");
     inputTwo.setAttribute("placeholder", "Company, years, key responsibilities");
     inputTwo.setAttribute("type", "text");
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "Remove";
+    removeButton.classList.add('removeBtn');
+    removeButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        WrapperDiv.remove();
+    });
     WrapperDiv.appendChild(inputOne);
     WrapperDiv.appendChild(inputTwo);
+    WrapperDiv.appendChild(removeButton);
     AddMoreExp.appendChild(WrapperDiv);
 };
 // AddMoreSkill Function
 const AddMoreSkills = () => {
     const AddMoreSkill = document.getElementsByClassName("Skills-Section")[0];
+    let WrapperDiv = document.createElement("div");
+    WrapperDiv.classList.add("inputWrape");
     let inputOne = document.createElement("input");
     inputOne.classList.add("Skills-class");
     inputOne.setAttribute("placeholder", "Skill/Expertise (e.g.,HTML,CSS) Enter a single skill here");
     inputOne.setAttribute("type", "text");
-    AddMoreSkill.appendChild(inputOne);
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "Remove";
+    removeButton.classList.add('removeBtn');
+    removeButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        WrapperDiv.remove();
+    });
+    WrapperDiv.appendChild(inputOne);
+    WrapperDiv.appendChild(removeButton);
+    AddMoreSkill.appendChild(WrapperDiv);
 };
 // education Ul create
 let newUlDiv = document.createElement("ul"); //yahan mene new ul create kia hai
