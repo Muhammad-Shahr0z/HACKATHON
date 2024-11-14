@@ -1,0 +1,319 @@
+<!-- /* In the name of Allah, the Most Gracious, the Most Merciful */ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder - By Muhammad Shahroz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="leftside.css" />
+    <link rel="stylesheet" href="rightside.css" />
+    <link rel="stylesheet" href="form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="print.css" />
+  </head>
+
+  <body>
+    <!-- Main Container Of Resume Builder Templete body chiled 01  -->
+    <div class="resume-container" id="container-resume">
+      <!-- left side div RESUME BUILDER CHILED 01  -->
+      <div class="left-div">
+        <!-- Porfile Picutre Div 01 -->
+        <div class="profile-pic-div">
+          <img
+            class="image"
+            src="/250.jpg"
+            alt="Profile Picture"
+            id="resumeImage"
+          />
+        </div>
+
+        <!-- Contact Information Div 02 -->
+
+        <div class="contact-info-div">
+          <h2>contact info</h2>
+
+          <form class="resume-form">
+            <p>
+              <span class="icon"><i class="fa-solid fa-phone"></i></span
+              ><span id="userPhone">phone number</span>
+            </p>
+            <p>
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span
+              ><span id="userEmail">email address</span>
+            </p>
+            <p>
+              <span class="icon"><i class="fa-solid fa-location-dot"></i></span
+              ><span id="userAddress">full address</span>
+            </p>
+            <p>
+              <span class="icon"><i class="fa-solid fa-id-card"></i></span
+              ><span id="userID">national id card no</span>
+            </p>
+          </form>
+        </div>
+
+        <div class="skills-div">
+          <h2>SKILLS</h2>
+
+          <ul class="skills-sec" id="skills-container">
+            <!-- <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>CSS</li> -->
+          </ul>
+        </div>
+
+        <!-- left side div ENDED  -->
+      </div>
+
+      <!-- right side div RESUME BUILDER CHILED 02 -->
+      <div class="right-div">
+        <!-- Full Name Section`      -->
+        <div class="full-name">
+          <hr />
+          <hr />
+          <hr />
+          <hr style="margin-bottom: 25px" />
+          <h6 id="profession">profession</h6>
+          <h1>
+            <span id="firstUserName">first name</span
+            ><span id="lastUserName">last name</span>
+          </h1>
+          <p>
+            A highly dedicated and passionate professional with a steadfast
+            commitment to personal and professional growth, consistently
+            striving for excellence in every endeavor and focused on delivering
+            exceptional results.
+          </p>
+          <hr class="border" />
+          <hr style="border: 2px solid black" />
+        </div>
+
+        <!-- Education Section -->
+
+        <h2>
+          <i class="fa-solid fa-school" style="color: black"></i>EDUCATIONS
+        </h2>
+
+        <div id="education-container">
+          <!-- <ul class="education-div">
+    <li class="education-detail">XYZ School, Karachi, Pakistan Completed: 2012</li>
+  </ul> -->
+        </div>
+
+        <!-- Experience Section -->
+
+        <h2><i class="fa-solid fa-briefcase"></i>WORK EXPERIENCE</h2>
+        <div id="experience-container">
+          <ul class="experience-div">
+            <!-- <li class="job-title">Data Entry & ERP Operator</li>
+        <li class="job-detail">Skilled in data entry and ERP Experience: 2 Years At J Dot</li> -->
+          </ul>
+        </div>
+
+        <hr />
+
+        <div id="language-div">
+          <h2>
+            <i class="fa-solid fa-language"></i>
+            LANGUAGES
+          </h2>
+
+          <ul class="language-div" id="language-ul">
+            <!-- <li class="language">URDU</li>
+            <li class="language">ENGLISH</li> -->
+          </ul>
+        </div>
+<div class="button-cluster">
+  <button id="print-button" onclick="PrintResume()">Print</button>
+  <button id="edit-button" onclick="Edit()">Edit</button>
+  <button id="share-button" onclick="shareable()">Share</button>
+  <button id="delete-button" onclick="Delete()">Delete</button>
+</div>
+        <hr />
+
+        <!-- right side div ENDED  -->
+      </div>
+    </div>
+
+    <!-- Main Container Of Resume Builder Form Area body chiled 02 -->
+    <form class="form-container" id="container-form">
+      <h1>Resume Builder</h1>
+      <p class="topPeragraph">
+        Designed and developed by <b>Muhammad Shahroz</b>
+      </p>
+
+      <ul class="links">
+        <a href="https://www.facebook.com/muhammad.shahroz.58/" target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/muhammad-shahroz-a35b68292/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/Muhammad-Shahr0z"
+          ><i class="fa-brands fa-github" target="_blank"></i
+        ></a>
+      </ul>
+
+      <label for="">First Name</label>
+      <input
+        type="text"
+        id="inputfName"
+        placeholder="Enter Your First Name"
+        required
+      />
+
+      <label for="">Last Name</label>
+      <input
+        type="text"
+        id="inputlName"
+        placeholder="Enter Your Last Name"
+        required
+      />
+
+      <label for=""
+        >Profile Picture <span class="size">(Size:250x250 image/*)</span></label
+      >
+      <input type="file" accept="image/*" id="inputImage" required />
+
+      <label for="">Profession</label>
+      <input
+        type="text"
+        id="inputProfession"
+        placeholder="Enter Your Profession"
+        required
+      />
+
+      <label for="">Mobile Number</label>
+      <input
+        type="number"
+        id="inputNumber"
+        placeholder="Enter Your Mobile Number"
+        required
+      />
+
+      <label for="">Email Address</label>
+      <input
+        type="email"
+        id="inputEmail"
+        placeholder="Enter Your Email Address"
+        required
+      />
+
+      <label for="">CNIC Number</label>
+      <input
+        type="text"
+        id="inputCnic"
+        placeholder="Enter CNIC"
+        pattern="[0-9\-]+"
+        title="Only numbers and dashes are allowed"
+        inputmode="numeric"
+        required
+      />
+
+      <label for="">Full Address</label>
+      <input
+        type="text"
+        id="inputAddress"
+        placeholder="Enter Your Full Address"
+        required
+      />
+
+      <!-- Educations SECTION -->
+      <label for="">Educations</label>
+      <div class="Education-Section">
+        <div class="inputWrape">
+          <input
+            type="text"
+            class="EducationTitle"
+            placeholder="Field of study (e.g.,Computer Science)"
+            required
+          />
+
+          <input
+            type="text"
+            class="EducationDetail"
+            placeholder="Degree, institution,and year"
+            required
+          />
+        </div>
+      </div>
+
+      <button type="button" class="addMoreButton" onclick="AddMoreEducations()">
+        Add More
+      </button>
+
+      <!-- Experience SECTION -->
+      <label for="">Experience</label>
+      <div class="Experience-Section">
+        <div class="inputWrape">
+          <input
+            type="text"
+            class="Experience-title"
+            placeholder="Job Title (e.g., Software Engineer)"
+            required
+          />
+          <input
+            type="text"
+            class="Experience-detail"
+            placeholder="Company, years, key responsibilities"
+            required
+          />
+        </div>
+      </div>
+
+      <button type="button" class="addMoreButton" onclick="AddMoreExperience()">
+        Add More
+      </button>
+
+      <!-- Skills SECTION -->
+      <label for="">Skills</label>
+
+      <div class="Skills-Section">
+        <input
+          type="text"
+          class="Skills-class"
+          placeholder="Skill/Expertise (e.g.,HTML,CSS) Enter a single skill here"
+          required
+        />
+      </div>
+
+      <button type="button" class="addMoreButton" onclick="AddMoreSkills()">
+        Add More
+      </button>
+
+      <!-- Languages Section -->
+
+      <label>Languages</label>
+      <div class="checkbox-lang">
+        <label>
+          <input type="checkbox" name="language" value="URDU" disabled  checked /> Urdu
+        </label>
+        <label>
+          <input type="checkbox" name="language" value="SINDHI" checked /> Sindhi
+        </label>
+        <label>
+          <input type="checkbox" name="language" value="ENGLISH" checked /> English
+        </label>
+      </div>
+
+      <button type="submit" id="genrateBtn" class="genrateButton">
+        Generate Resume
+      </button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
